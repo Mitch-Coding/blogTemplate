@@ -1,0 +1,25 @@
+{
+  "name": "eiddie-portfolio",
+  "private": true,
+  "version": "0.0.1",
+  "type": "module",
+  "scripts": {
+    "dev": "nuxt dev",
+    "build": "nuxt build",
+    "preview": "nuxt preview",
+    "typecheck": "nuxt typecheck",
+    "postinstall": "nuxt prepare"
+  },
+  "devDependencies": {
+    "@nuxt/content": "^3.8.1",
+    "better-sqlite3": "^12.9.0",
+    "nuxt": "^3.17.7",
+    "playwright": "^1.59.1",
+    "sass": "^1.89.0",
+    "vue-tsc": "^3.1.1"
+  },
+  "dependencies": {
+    "pngjs": "^7.0.0",
+    "simple-icons": "^16.14.0"
+  }
+}
