@@ -1,0 +1,436 @@
+.name-section {
+  position: relative;
+  z-index: 2;
+  content-visibility: visible;
+}
+
+.name-section .section-heading h2 {
+  font-family: "Archivo Black", sans-serif;
+  letter-spacing: 0.02em;
+  transform: none;
+  color: var(--ink);
+  text-shadow: none;
+}
+
+.name-heading-h {
+  position: relative;
+  display: inline-block;
+}
+
+
+.name-heading-spider {
+  position: absolute;
+  left: calc(100% - 0.18em);
+  top: calc(100% - 1.05rem);
+  width: clamp(3.2rem, 6.55vw, 4.25rem);
+  height: auto;
+  pointer-events: none;
+  user-select: none;
+  -webkit-user-drag: none;
+  transform: translateX(-50%);
+  filter: var(--about-spider-filter);
+}
+
+.name-poster {
+  display: grid;
+  justify-items: center;
+}
+
+.name-stack {
+  position: relative;
+  width: min(100%, 54rem);
+  min-height: 42rem;
+  padding: 1rem clamp(1.2rem, 3vw, 2rem) 1rem clamp(3.4rem, 8vw, 6.8rem);
+}
+
+.name-ghost {
+  position: absolute;
+  top: 0.4rem;
+  left: clamp(2.3rem, 6vw, 4.9rem);
+  display: inline-flex;
+  flex-direction: column;
+  align-items: flex-start;
+  font-family: "Archivo Black", sans-serif;
+  font-size: clamp(7rem, 16.8vw, 15rem);
+  line-height: 0.72;
+  gap: clamp(0.05rem, 0.45vw, 0.2rem);
+  user-select: none;
+  z-index: 0;
+}
+
+.name-ghost-letter {
+  display: block;
+  color: var(--name-ghost-ink);
+  letter-spacing: 0.08em;
+  text-shadow: none;
+  pointer-events: auto;
+  transition:
+    color 220ms ease,
+    text-shadow 220ms ease,
+    opacity 220ms ease,
+    filter 220ms ease;
+}
+
+.name-ghost-letter:hover {
+  color: var(--name-ghost-hover-ink);
+  text-shadow:
+    0 0 18px var(--name-ghost-hover-shadow),
+    0 0 34px var(--name-ghost-hover-shadow-soft);
+  filter: saturate(1.02);
+}
+
+.name-row {
+  --row-progress: 0;
+  --letter-hover-tilt: -10deg;
+  --letter-hover-x: 0.64rem;
+  --letter-hover-y: -0.34rem;
+  --letter-hover-scale: 1.14;
+  --hover-font: "Bangers", sans-serif;
+  --hover-fill: linear-gradient(180deg, #ff5d45 0%, #ff2d2d 100%);
+  --hover-fill-size: 100% 100%;
+  --hover-fill-position: 0 0;
+  --hover-fill-repeat: no-repeat;
+  --hover-stroke: #050505;
+  --hover-stroke-width: 2.5px;
+  --hover-shadow:
+    0.085em 0.085em 0 #ffd84d,
+    0.17em 0.17em 0 rgba(5, 5, 5, 0.9);
+  --label-hover-tilt: -4deg;
+  --thread-drift-x: 0.7rem;
+  --thread-drift-y: -0.3rem;
+  --thread-drift-rotate: -1.2deg;
+  --letter-drift-x: 1.3rem;
+  --letter-drift-y: -0.95rem;
+  --letter-drift-rotate: -7deg;
+  --letter-drift-skew: -4deg;
+  --copy-drift-x: -2.3rem;
+  --copy-drift-y: -0.28rem;
+  --copy-drift-rotate: -2.5deg;
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: clamp(1rem, 2vw, 1.55rem);
+  padding-left: clamp(4.8rem, 11vw, 8.6rem);
+  isolation: isolate;
+  z-index: 1;
+  pointer-events: none;
+  transition:
+    opacity 120ms linear,
+    transform 120ms linear,
+    filter 120ms linear;
+}
+
+.name-row + .name-row {
+  margin-top: 0.65rem;
+}
+
+.name-row:nth-child(1) {
+  --letter-hover-tilt: -12deg;
+  --letter-hover-x: 0.54rem;
+  --letter-hover-scale: 1.14;
+  --hover-font: "Bangers", sans-serif;
+  --hover-fill: linear-gradient(180deg, #ff5c45 0%, #ff2d2d 100%);
+  --hover-shadow:
+    0.085em 0.085em 0 #ffd84d,
+    0.17em 0.17em 0 rgba(5, 5, 5, 0.9);
+  --label-hover-tilt: -7deg;
+  --thread-drift-x: 0.55rem;
+  --thread-drift-y: -0.44rem;
+  --thread-drift-rotate: -1.6deg;
+  --letter-drift-x: 1.02rem;
+  --letter-drift-y: -1.18rem;
+  --letter-drift-rotate: -10deg;
+  --letter-drift-skew: -6deg;
+  --copy-drift-x: -2.8rem;
+  --copy-drift-y: -0.34rem;
+  --copy-drift-rotate: -4.6deg;
+}
+
+.name-row:nth-child(2) {
+  --letter-hover-tilt: 10deg;
+  --letter-hover-x: 0.82rem;
+  --letter-hover-scale: 1.16;
+  --hover-font: "Sigmar", sans-serif;
+  --hover-fill: linear-gradient(180deg, #d3ff66 0%, #8dff1f 100%);
+  --hover-shadow:
+    0.08em 0.08em 0 #ff5ed1,
+    0.16em 0.16em 0 rgba(5, 5, 5, 0.9);
+  --label-hover-tilt: 7deg;
+  --thread-drift-x: 1rem;
+  --thread-drift-y: 0.08rem;
+  --thread-drift-rotate: 1.2deg;
+  --letter-drift-x: 1.7rem;
+  --letter-drift-y: -0.82rem;
+  --letter-drift-rotate: 6deg;
+  --letter-drift-skew: 4deg;
+  --copy-drift-x: -2rem;
+  --copy-drift-y: -0.12rem;
+  --copy-drift-rotate: 2.8deg;
+}
+
+.name-row:nth-child(3) {
+  --letter-hover-tilt: -8deg;
+  --letter-hover-x: 0.92rem;
+  --letter-hover-scale: 1.13;
+  --hover-font: "Changa One", sans-serif;
+  --hover-fill:
+    radial-gradient(circle at 2.2px 2.2px, rgba(255, 240, 246, 0.8) 0 1.35px, transparent 1.5px),
+    linear-gradient(180deg, #ff97b6 0%, #ff537d 100%);
+  --hover-fill-size: 10px 10px, 100% 100%;
+  --hover-fill-position: 0 0, 0 0;
+  --hover-fill-repeat: repeat, no-repeat;
+  --hover-stroke: #34151f;
+  --hover-stroke-width: 2.2px;
+  --hover-shadow:
+    0.075em 0.075em 0 #ff6f9d,
+    0.15em 0.15em 0 #ffd45e,
+    0.23em 0.23em 0 rgba(5, 5, 5, 0.34);
+  --label-hover-tilt: -6deg;
+  --thread-drift-x: 0.84rem;
+  --thread-drift-y: -0.18rem;
+  --thread-drift-rotate: -1deg;
+  --letter-drift-x: 1.46rem;
+  --letter-drift-y: -1.02rem;
+  --letter-drift-rotate: -5deg;
+  --letter-drift-skew: -3deg;
+  --copy-drift-x: -2.35rem;
+  --copy-drift-y: -0.24rem;
+  --copy-drift-rotate: -2.2deg;
+}
+
+.name-row:nth-child(4) {
+  --letter-hover-tilt: 9deg;
+  --letter-hover-x: 0.78rem;
+  --letter-hover-scale: 1.16;
+  --hover-font: "Luckiest Guy", sans-serif;
+  --hover-fill: linear-gradient(180deg, #fff38b 0%, #ffd84d 100%);
+  --hover-shadow:
+    0.08em 0.08em 0 #37dcff,
+    0.16em 0.16em 0 #37dcff,
+    0.24em 0.24em 0 rgba(5, 5, 5, 0.84);
+  --label-hover-tilt: 8deg;
+  --thread-drift-x: 1.08rem;
+  --thread-drift-y: 0.16rem;
+  --thread-drift-rotate: 1.4deg;
+  --letter-drift-x: 1.84rem;
+  --letter-drift-y: -0.72rem;
+  --letter-drift-rotate: 7deg;
+  --letter-drift-skew: 4.5deg;
+  --copy-drift-x: -1.9rem;
+  --copy-drift-y: -0.14rem;
+  --copy-drift-rotate: 3.4deg;
+}
+
+.name-row:nth-child(5) {
+  --letter-hover-tilt: -12deg;
+  --letter-hover-x: 0.52rem;
+  --letter-hover-scale: 1.08;
+  --hover-font: "Bowlby One SC", sans-serif;
+  --hover-fill: linear-gradient(180deg, #fff8d8 0%, #ffe76f 50%, #ffb347 100%);
+  --hover-stroke: #1b1208;
+  --hover-stroke-width: 2.2px;
+  --hover-shadow:
+    0.075em 0.075em 0 #ffd84d,
+    0.15em 0.15em 0 #ff9b2f,
+    0.24em 0.24em 0 rgba(5, 5, 5, 0.46);
+  --label-hover-tilt: -7deg;
+  --thread-drift-x: 0.68rem;
+  --thread-drift-y: -0.26rem;
+  --thread-drift-rotate: -1.3deg;
+  --letter-drift-x: 1.18rem;
+  --letter-drift-y: -0.92rem;
+  --letter-drift-rotate: -8deg;
+  --letter-drift-skew: -4deg;
+  --copy-drift-x: -2.55rem;
+  --copy-drift-y: -0.26rem;
+  --copy-drift-rotate: -3.8deg;
+}
+
+.name-row:nth-child(6) {
+  --letter-hover-tilt: 12deg;
+  --letter-hover-x: 0.88rem;
+  --letter-hover-scale: 1.15;
+  --hover-font: "Lilita One", sans-serif;
+  --hover-fill: linear-gradient(180deg, #fff0a4 0%, #ffbf5b 46%, #ff6940 100%);
+  --hover-stroke: #211108;
+  --hover-stroke-width: 2.1px;
+  --hover-shadow:
+    -0.03em -0.03em 0 rgba(255, 249, 214, 0.5),
+    0.075em 0.075em 0 #ffc23d,
+    0.15em 0.15em 0 rgba(239, 46, 53, 0.72),
+    0.22em 0.22em 0 rgba(5, 5, 5, 0.34);
+  --label-hover-tilt: 6deg;
+  --thread-drift-x: 0.96rem;
+  --thread-drift-y: 0.12rem;
+  --thread-drift-rotate: 1.1deg;
+  --letter-drift-x: 1.62rem;
+  --letter-drift-y: -0.74rem;
+  --letter-drift-rotate: 8deg;
+  --letter-drift-skew: 4deg;
+  --copy-drift-x: -2.08rem;
+  --copy-drift-y: -0.16rem;
+  --copy-drift-rotate: 2.9deg;
+}
+
+.name-row::before {
+  content: none;
+}
+
+.name-row::after {
+  content: none;
+}
+
+.name-letter-shell,
+.name-letter,
+.name-copy em,
+.name-translation {
+  display: block;
+  transition:
+    opacity 180ms linear,
+    transform 320ms cubic-bezier(0.16, 1, 0.3, 1),
+    color 220ms ease,
+    text-shadow 320ms ease,
+    letter-spacing 320ms ease,
+    background-image 220ms ease,
+    -webkit-text-stroke-color 220ms ease,
+    -webkit-text-stroke-width 220ms ease,
+    filter 220ms ease;
+  transform-origin: left center;
+}
+
+.name-letter-shell {
+  position: relative;
+  display: grid;
+  place-items: center;
+  width: clamp(5rem, 11.6vw, 9.15rem);
+  min-height: clamp(5rem, 11.6vw, 9.15rem);
+  padding: 0.35rem 0.9rem 0.55rem 0.35rem;
+  margin: -0.35rem -0.9rem -0.55rem -0.35rem;
+  cursor: pointer;
+  border-radius: 1rem;
+  outline: none;
+  z-index: 2;
+  flex-shrink: 0;
+  pointer-events: auto;
+}
+
+.name-letter-shell::before {
+  content: "";
+  position: absolute;
+  inset: -0.4rem -1.2rem -0.8rem -0.25rem;
+  border-radius: inherit;
+}
+
+.name-letter-shell:focus-visible {
+  outline: 2px solid var(--name-focus-outline);
+  outline-offset: 0.18rem;
+}
+
+.name-letter {
+  position: relative;
+  z-index: 1;
+  font-family: "Archivo Black", sans-serif;
+  font-size: clamp(4rem, 10vw, 8rem);
+  line-height: 0.9;
+  letter-spacing: 0.02em;
+  color: var(--name-letter-ink);
+  -webkit-text-fill-color: currentColor;
+  -webkit-text-stroke: 0 transparent;
+  background-image: none;
+  background-size: auto;
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  opacity: calc(0.74 + var(--row-progress) * 0.26);
+  text-shadow: none;
+  transform: translate3d(0, calc((1 - var(--row-progress)) * 12px), 0) rotate(0deg) scale(1);
+  pointer-events: none;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+.name-copy {
+  position: relative;
+  display: inline-flex;
+  align-items: baseline;
+  gap: 0.7rem;
+  flex-wrap: wrap;
+  z-index: 1;
+  pointer-events: auto;
+}
+
+.name-copy em {
+  font-family: "Manrope", sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: clamp(1.05rem, 1.85vw, 1.68rem);
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  line-height: 1;
+  color: var(--name-copy-ink);
+  -webkit-text-stroke: 0 transparent;
+  text-shadow: none;
+  opacity: calc(0.24 + var(--row-progress) * 0.76);
+  transform:
+    translate3d(
+      calc((1 - var(--row-progress)) * -42px),
+      0,
+      0
+    )
+    rotate(0deg)
+    scale(1);
+}
+
+.name-translation {
+  font-family: "Manrope", "PingFang SC", "Noto Sans SC", sans-serif;
+  font-size: clamp(0.76rem, 0.98vw, 0.95rem);
+  letter-spacing: 0.08em;
+  line-height: 1;
+  color: var(--name-translation-ink);
+  opacity: calc(0.14 + var(--row-progress) * 0.56);
+  transform:
+    translate3d(
+      calc((1 - var(--row-progress)) * -34px),
+      0,
+      0
+    )
+    rotate(0deg)
+    scale(1);
+}
+
+.name-letter-overlay {
+  display: none;
+}
+
+.name-letter-shell:is(:hover, :focus-visible, :active) .name-letter {
+  font-family: var(--hover-font);
+  letter-spacing: 0.05em;
+  color: transparent;
+  -webkit-text-fill-color: transparent;
+  background-image: var(--hover-fill);
+  background-size: var(--hover-fill-size);
+  background-position: var(--hover-fill-position);
+  background-repeat: var(--hover-fill-repeat);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-stroke: var(--hover-stroke-width) var(--hover-stroke);
+  text-shadow: var(--hover-shadow);
+  transform: translate3d(var(--letter-hover-x), calc((1 - var(--row-progress)) * 12px + var(--letter-hover-y)), 0) rotate(var(--letter-hover-tilt)) scale(var(--letter-hover-scale));
+  filter: drop-shadow(0 0 12px var(--name-letter-hover-glow));
+}
+
+.name-letter-shell:is(:hover, :focus-visible, :active) + .name-copy em {
+  color: var(--name-copy-hover-ink);
+  text-shadow:
+    0.03em 0.03em 0 var(--name-copy-hover-shadow),
+    4px 0 0 var(--name-copy-hover-cyan),
+    -4px 0 0 var(--name-copy-hover-red),
+    0 12px 18px var(--name-copy-hover-drop);
+  transform: translate3d(calc((1 - var(--row-progress)) * -42px + 0.95rem), -0.08rem, 0) rotate(var(--label-hover-tilt)) scale(1.06);
+}
+
+.name-letter-shell:is(:hover, :focus-visible, :active) + .name-copy .name-translation {
+  color: var(--name-translation-hover-ink);
+  text-shadow: none;
+  transform: translate3d(calc((1 - var(--row-progress)) * -34px + 0.7rem), -0.05rem, 0) rotate(0deg) scale(1.02);
+}
+

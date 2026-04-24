@@ -1,0 +1,13 @@
+// Home page styles — import order matters (matches original styles.css)
+@use "loader";
+@use "topbar";
+@use "sections";
+@use "hero";
+@use "name";
+@use "about";
+@use "skills";
+@use "projects";
+@use "modal";
+@use "contact";
+@use "animations";
+@use "responsive";

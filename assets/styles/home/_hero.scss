@@ -1,0 +1,267 @@
+.hero-section {
+  position: relative;
+  min-height: 180vh;
+}
+
+.hero-stage {
+  position: sticky;
+  top: 0;
+  min-height: 100svh;
+  display: grid;
+  place-items: center;
+  overflow: clip;
+  padding: 5.5rem 1rem 1.2rem;
+}
+
+.hero-stage::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: var(--hero-stage-bg);
+  opacity: 1;
+}
+
+.hero-stage::after {
+  content: none;
+}
+
+.hero-spider {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 4;
+  width: clamp(5.4rem, 8.8vw, 6.8rem);
+  animation: spider-whole-drop 0.42s cubic-bezier(0.22, 0.9, 0.28, 1.05) both;
+  pointer-events: none;
+  overflow: visible;
+}
+
+.hero-spider__full {
+  display: block;
+  width: 100%;
+  height: auto;
+  user-select: none;
+  -webkit-user-drag: none;
+}
+
+.hero-poster-shell {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  perspective: 2400px;
+}
+
+.hero-imprint {
+  position: absolute;
+  width: min(58vw, 860px);
+  aspect-ratio: 1.5;
+  border-radius: 4rem;
+  background:
+    radial-gradient(circle at 50% 50%, var(--hero-imprint-glow), transparent 68%);
+  box-shadow:
+    none;
+  opacity: calc(var(--hero-detach-progress) * 0.06);
+  transform: translate(0, 0.95rem) rotate(-2.7deg);
+}
+
+.hero-imprint::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  background:
+    radial-gradient(circle at 50% 50%, var(--hero-imprint-red), transparent 62%);
+  opacity: 0.26;
+}
+
+.hero-imprint::after {
+  content: "";
+  position: absolute;
+  inset: auto 9% 6% 9%;
+  height: 16%;
+  background:
+    radial-gradient(ellipse at center, var(--hero-imprint-shadow), transparent 72%);
+  opacity: calc(var(--hero-detach-progress) * 0.18);
+  filter: blur(18px);
+}
+
+.hero-poster {
+  position: relative;
+  width: min(58vw, 860px);
+  aspect-ratio: 1.5;
+  transform:
+    translate3d(calc(var(--hero-lift-x) + var(--hero-shift-x)), calc(var(--hero-lift-y) + var(--hero-shift-y)), 0)
+    rotate(calc(-2.7deg + var(--hero-lift-rotate) + var(--hero-rotate)))
+    rotateX(var(--hero-tilt-x))
+    rotateY(var(--hero-tilt-y))
+    scale(var(--hero-scale));
+  transform-origin: 52% 58%;
+  filter:
+    drop-shadow(0 28px 64px rgba(var(--hero-shadow-rgb), calc(0.34 + var(--hero-lift-progress) * 0.16)))
+    drop-shadow(0 0 24px var(--hero-poster-shadow));
+  will-change: transform;
+  transform-style: preserve-3d;
+}
+
+.hero-poster::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(130deg, var(--hero-poster-highlight), transparent 28%),
+    radial-gradient(circle at 80% 84%, var(--hero-poster-highlight-soft), transparent 18%);
+  mix-blend-mode: var(--hero-highlight-blend);
+  opacity: calc(0.16 - var(--hero-progress) * 0.06);
+  pointer-events: none;
+}
+
+.hero-poster::after {
+  content: "";
+  position: absolute;
+  left: 9%;
+  right: 9%;
+  bottom: -10%;
+  height: 18%;
+  background:
+    radial-gradient(ellipse at center, rgba(var(--hero-shadow-rgb), calc(0.22 + var(--hero-lift-progress) * 0.18)), transparent 68%);
+  opacity: calc(0.3 + var(--hero-lift-progress) * 0.46);
+  transform: translateY(calc(14px + var(--hero-lift-progress) * 22px)) scaleX(calc(0.96 + var(--hero-detach-progress) * 0.1));
+  filter: blur(18px);
+}
+
+.hero-sticker {
+  position: absolute;
+  inset: 0;
+  overflow: visible;
+  transform-style: preserve-3d;
+  isolation: isolate;
+  border-radius: 4rem;
+}
+
+.hero-sticker::before,
+.hero-sticker::after {
+  content: none;
+}
+
+.hero-sticker.peel,
+.hero-sticker .peel-layer,
+.hero-sticker .peel-top-outer-clip,
+.hero-sticker .peel-back-outer-clip {
+  border-radius: 4rem;
+}
+
+.hero-sticker.peel {
+  position: absolute;
+  inset: 0;
+  opacity: 1;
+}
+
+.hero-sticker .peel-layer {
+  overflow: hidden;
+}
+
+.hero-sticker__top,
+.hero-sticker__back,
+.hero-sticker__bottom {
+  box-shadow:
+    0 0 0 1px rgba(255, 255, 255, 0.12),
+    inset 0 0 0 1px rgba(255, 255, 255, 0.08);
+}
+
+.hero-sticker .hero-sticker__top {
+  background-color: transparent;
+  background:
+    linear-gradient(135deg, rgba(255, 255, 255, 0.12), transparent 28%),
+    linear-gradient(166deg, transparent 52%, rgba(255, 255, 255, 0.1) 66%, transparent 76%),
+    radial-gradient(circle at 84% 18%, rgba(255, 255, 255, 0.12), transparent 16%),
+    url("/ME.png");
+  background-size:
+    100% 100%,
+    100% 100%,
+    100% 100%,
+    126% 126%;
+  background-position:
+    50% 50%,
+    50% 50%,
+    50% 50%,
+    50% 50.2%;
+  background-repeat: no-repeat;
+}
+
+.hero-sticker .hero-sticker__back {
+  background-color: transparent;
+  background:
+    linear-gradient(140deg, rgba(255, 255, 255, 0.28), rgba(180, 176, 168, 0.12) 32%, rgba(82, 82, 78, 0.16) 100%),
+    radial-gradient(circle at 22% 18%, rgba(255, 255, 255, 0.3), transparent 18%),
+    radial-gradient(circle at 70% 70%, rgba(70, 70, 70, 0.18), transparent 22%),
+    radial-gradient(circle at 35% 58%, rgba(100, 100, 96, 0.12), transparent 20%),
+    linear-gradient(180deg, #d8d2c8 0%, #c8c1b4 100%);
+}
+
+.hero-sticker__back::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image:
+    radial-gradient(rgba(0, 0, 0, 0.12) 0.7px, transparent 0.9px),
+    radial-gradient(rgba(255, 255, 255, 0.08) 0.6px, transparent 0.8px);
+  background-size: 9px 9px, 13px 13px;
+  background-position: 0 0, 4px 7px;
+  mix-blend-mode: multiply;
+  opacity: 0.42;
+}
+
+.hero-sticker .hero-sticker__bottom {
+  background: transparent;
+  background-color: transparent;
+  box-shadow: none;
+}
+
+.hero-sticker .peel-back-shadow,
+.hero-sticker .peel-back-reflection,
+.hero-sticker .peel-bottom-shadow,
+.hero-sticker .peel-top-shadow {
+  border-radius: inherit;
+}
+
+.hero-scroll {
+  position: absolute;
+  bottom: 0.15rem;
+  left: 50%;
+  transform: translateX(-50%);
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.7rem;
+  z-index: 3;
+  opacity: calc(1 - var(--hero-progress) * 1.25);
+}
+
+.hero-scroll__label {
+  font-size: 0.72rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--ink-faint);
+}
+
+.hero-scroll__line {
+  position: relative;
+  width: 1px;
+  height: 72px;
+  background: linear-gradient(180deg, var(--hero-scroll-line), transparent);
+}
+
+.hero-scroll__line::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 0.46rem;
+  height: 0.46rem;
+  border-radius: 50%;
+  background: var(--hero-scroll-dot);
+  box-shadow: 0 0 16px var(--hero-scroll-dot-shadow);
+  transform: translateX(-50%);
+  animation: scroll-drop 1.6s ease-in-out infinite;
+}

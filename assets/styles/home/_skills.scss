@@ -1,0 +1,511 @@
+.skills-section.section-shell {
+  scroll-margin-top: 5.4rem;
+  padding-top: 4.4rem;
+  padding-bottom: 3.4rem;
+}
+
+.skill-universe__header {
+  position: absolute;
+  z-index: 3;
+  top: 1.35rem;
+  left: 1.35rem;
+  max-width: min(calc(100% - 2.4rem), 20rem);
+  opacity: var(--skills-title-progress);
+  transition:
+    opacity 120ms linear;
+}
+
+.skill-universe__header .eyebrow {
+  margin-bottom: 0.45rem;
+  opacity: var(--skills-title-progress);
+  letter-spacing: 0.12em;
+  transition:
+    opacity 120ms linear;
+}
+
+.skill-universe__header h2 {
+  max-width: 5.4ch;
+  text-wrap: balance;
+  opacity: var(--skills-title-progress);
+  transition:
+    opacity 120ms linear;
+}
+
+.skill-universe::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  background:
+    radial-gradient(circle at 24% 24%, var(--skills-overlay-glow), transparent 18%),
+    radial-gradient(circle at 80% 20%, var(--skills-overlay-glow-soft), transparent 22%),
+    radial-gradient(circle at 50% 50%, transparent 38%, var(--skills-overlay-vignette) 100%);
+}
+
+.universe-web {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+  filter: drop-shadow(0 0 14px var(--skills-web-shadow));
+  transition: filter 120ms linear;
+}
+
+.universe-web::after {
+  content: "";
+  position: absolute;
+  inset: 1.5%;
+  background-image: url("/issue4-user-vector.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  opacity: calc(var(--skills-web-density-progress) * 0.16);
+  transform: scale(calc(0.96 + var(--skills-web-density-progress) * 0.075))
+    rotate(calc((1 - var(--skills-web-density-progress)) * 1deg));
+  mix-blend-mode: screen;
+  filter: blur(calc((1 - var(--skills-web-density-progress)) * 1.2px));
+  transition:
+    opacity 120ms linear,
+    transform 120ms linear,
+    filter 120ms linear;
+}
+
+.universe-web__image {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: center;
+  transform: scale(calc(0.34 + var(--skills-web-progress) * 0.8));
+  transform-origin: center center;
+  opacity: calc(var(--skills-web-progress) * 0.92);
+  mix-blend-mode: screen;
+  filter: brightness(calc(0.62 + var(--skills-web-progress) * 0.3))
+    contrast(calc(0.76 + var(--skills-web-progress) * 0.32))
+    blur(calc((1 - var(--skills-web-progress)) * 14px));
+  transition:
+    transform 120ms linear,
+    opacity 120ms linear,
+    filter 120ms linear;
+}
+
+.tool-badge {
+  --badge-width: 3.7rem;
+  --badge-height: 3.7rem;
+  --icon-size: calc(100% - 1rem);
+  --badge-enter-x: 0px;
+  --badge-enter-y: 20px;
+  --badge-enter-rotate: 0deg;
+  --badge-drift-x: 0px;
+  --badge-drift-y: -4px;
+  --badge-drift-rotate: 0deg;
+  --badge-drift-scale: 0.008;
+  --badge-pop: 0;
+  --badge-float: 0;
+  --badge-burst-y: 0px;
+  --badge-burst-scale: 0;
+  --badge-burst-rotate: 0deg;
+  --badge-base-x: calc((1 - var(--badge-pop)) * var(--badge-enter-x));
+  --badge-base-y: calc((1 - var(--badge-pop)) * var(--badge-enter-y));
+  --badge-base-rotate: calc((1 - var(--badge-pop)) * var(--badge-enter-rotate));
+  --badge-base-scale: calc(0.78 + var(--badge-pop) * 0.22);
+  position: absolute;
+  z-index: 2;
+  display: grid;
+  place-items: center;
+  width: var(--badge-width);
+  height: var(--badge-height);
+  padding: 0;
+  border-radius: 1.2rem;
+  border: 1px solid var(--panel-border);
+  background: rgba(var(--badge-bg-rgb), 0.4);
+  backdrop-filter: blur(14px);
+  box-shadow: 0 0 0 1px var(--badge-inset) inset;
+  color: var(--badge-ink);
+  opacity: calc(var(--badge-pop) * 0.96);
+  transform:
+    translate3d(var(--badge-base-x), calc(var(--badge-base-y) - var(--badge-burst-y)), 0)
+    rotate(calc(var(--badge-base-rotate) + var(--badge-burst-rotate)))
+    scale(calc(var(--badge-base-scale) + var(--badge-burst-scale)));
+  background: rgba(var(--badge-bg-rgb), calc(0.3 + var(--badge-pop) * 0.24));
+  border-color: rgba(var(--badge-border-rgb), calc(0.05 + var(--badge-pop) * 0.07));
+  transition:
+    transform 120ms linear,
+    opacity 120ms linear,
+    border-color 220ms ease,
+    background-color 220ms ease,
+    box-shadow 220ms ease,
+    color 220ms ease;
+  animation: badge-bob var(--badge-float-duration, 9.6s) ease-in-out infinite;
+  animation-delay: var(--badge-float-delay, 0s);
+  pointer-events: auto;
+}
+
+.tool-badge__icon {
+  width: var(--icon-size);
+  height: var(--icon-size);
+  background: currentColor;
+  -webkit-mask-image: var(--icon);
+  mask-image: var(--icon);
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  -webkit-mask-position: center;
+  mask-position: center;
+  -webkit-mask-size: contain;
+  mask-size: contain;
+  transition:
+    background 220ms ease,
+    transform 220ms ease,
+    filter 220ms ease;
+}
+
+.tool-badge--codex-image .tool-badge__icon {
+  background: transparent url("/skill-icons/codex-color-clean.png") center/contain no-repeat;
+  -webkit-mask-image: none;
+  mask-image: none;
+  filter: grayscale(1) brightness(1.2) contrast(1.04);
+}
+
+.tool-badge--pwa-image .tool-badge__icon {
+  background: transparent url("/skill-icons/pwa-icon.webp") center/contain no-repeat;
+  -webkit-mask-image: none;
+  mask-image: none;
+  filter:
+    grayscale(1)
+    invert(1)
+    brightness(1.34)
+    contrast(1.16);
+  opacity: 0.92;
+}
+
+.tool-badge--cloudflare-image .tool-badge__icon {
+  background: transparent url("/skill-icons/cloudflare1.svg") center/contain no-repeat;
+  -webkit-mask-image: none;
+  mask-image: none;
+  filter: grayscale(1) saturate(0) brightness(1.14) contrast(1.04);
+}
+
+.tool-badge::after {
+  content: attr(data-label);
+  position: absolute;
+  top: 50%;
+  left: calc(100% + 0.6rem);
+  transform: translate3d(-0.35rem, -50%, 0);
+  padding: 0.42rem 0.68rem;
+  border-radius: 999px;
+  border: 1px solid var(--badge-label-border);
+  background: var(--badge-label-bg);
+  color: var(--badge-ink);
+  font-size: 0.68rem;
+  letter-spacing: 0.12em;
+  line-height: 1;
+  text-transform: uppercase;
+  white-space: nowrap;
+  opacity: 0;
+  pointer-events: none;
+  transition:
+    opacity 180ms ease,
+    transform 180ms ease;
+}
+
+.tool-badge--label-left::after {
+  left: auto;
+  right: calc(100% + 0.6rem);
+  transform: translate3d(0.35rem, -50%, 0);
+}
+
+.tool-badge:is(:hover, :focus-visible) {
+  background: var(--badge-hover-bg, var(--topbar-link-hover-bg));
+  border-color: var(--badge-hover-border, var(--topbar-link-hover-border));
+  box-shadow:
+    0 0 0 1px var(--panel-inset) inset,
+    0 0 24px var(--skills-web-shadow);
+  color: var(--icon-hover-color, var(--badge-ink));
+}
+
+.tool-badge:is(:hover, :focus-visible) .tool-badge__icon {
+  background: var(--icon-hover, currentColor);
+  transform: scale(1.05);
+}
+
+.tool-badge--codex-image:is(:hover, :focus-visible) .tool-badge__icon {
+  background: transparent url("/skill-icons/codex-color-clean.png") center/contain no-repeat;
+  filter: none;
+}
+
+.tool-badge--pwa-image:is(:hover, :focus-visible) .tool-badge__icon {
+  background: transparent url("/skill-icons/pwa-icon.webp") center/contain no-repeat;
+  filter: none;
+}
+
+.tool-badge--apachejmeter-image .tool-badge__icon {
+  background: transparent url("/skill-icons/apachejmeter.svg") center/contain no-repeat;
+  -webkit-mask-image: none;
+  mask-image: none;
+  filter: grayscale(0.82) saturate(0.18) brightness(1.24) contrast(1.1);
+}
+
+.tool-badge--apachejmeter-image:is(:hover, :focus-visible) .tool-badge__icon {
+  background: transparent url("/skill-icons/apachejmeter.svg") center/contain no-repeat;
+  -webkit-mask-image: none;
+  mask-image: none;
+  filter: grayscale(0) saturate(1.08) brightness(1.06) contrast(1.08);
+  opacity: 1;
+}
+
+.tool-badge--maven-image .tool-badge__icon {
+  background: transparent url("/skill-icons/maven.svg") center/contain no-repeat;
+  -webkit-mask-image: none;
+  mask-image: none;
+  filter: grayscale(1) saturate(0) brightness(1.14) contrast(1.04);
+}
+
+.tool-badge--maven-image:is(:hover, :focus-visible) .tool-badge__icon {
+  background: transparent url("/skill-icons/maven.svg") center/contain no-repeat;
+  -webkit-mask-image: none;
+  mask-image: none;
+  filter: grayscale(0) saturate(1) brightness(1) contrast(1);
+}
+
+.tool-badge--linux-image .tool-badge__icon {
+  background: transparent var(--icon) center/contain no-repeat;
+  -webkit-mask-image: none;
+  mask-image: none;
+  filter: grayscale(1) saturate(0) brightness(1.14) contrast(1.04);
+}
+
+.tool-badge--linux-image:is(:hover, :focus-visible) .tool-badge__icon {
+  background: transparent var(--icon) center/contain no-repeat;
+  -webkit-mask-image: none;
+  mask-image: none;
+  filter: none;
+}
+
+.tool-badge--cloudflare-image:is(:hover, :focus-visible) .tool-badge__icon {
+  background: transparent url("/skill-icons/cloudflare1.svg") center/contain no-repeat;
+  -webkit-mask-image: none;
+  mask-image: none;
+  filter: grayscale(0) saturate(1) brightness(1) contrast(1);
+}
+
+.tool-badge--12 {
+  z-index: 3;
+}
+
+.tool-badge--12 .tool-badge__icon {
+  transform: scale(1.06);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .site-loader__label {
+    animation: none;
+  }
+}
+
+.tool-badge:is(:hover, :focus-visible)::after {
+  opacity: 1;
+  transform: translate3d(0, -50%, 0);
+}
+
+.tool-badge--7:is(:hover, :focus-visible) .tool-badge__icon,
+.tool-badge--11:is(:hover, :focus-visible) .tool-badge__icon,
+.tool-badge--14:is(:hover, :focus-visible) .tool-badge__icon {
+  background: #050505;
+}
+
+.tool-badge--7 {
+  z-index: 6;
+}
+
+.tool-badge--8,
+.tool-badge--14 {
+  color: rgba(245, 241, 232, 1);
+}
+
+.tool-badge--8 .tool-badge__icon,
+.tool-badge--14 .tool-badge__icon {
+  filter: brightness(1.38) contrast(1.18);
+}
+
+.tool-badge--1 {
+  --badge-order: 0;
+  bottom: 15%;
+  left: 41%;
+}
+
+.tool-badge--2 {
+  --badge-order: 3;
+  top: 38%;
+  left: 55%;
+}
+
+.tool-badge--3 {
+  --badge-order: 5;
+  bottom: 17%;
+  right: 28%;
+  left: auto;
+  top: auto;
+}
+
+.tool-badge--3 .tool-badge__icon {
+  filter: grayscale(1) saturate(0) brightness(1.14) contrast(1.04);
+}
+
+:root:not([data-theme="light"]) .tool-badge--apachejmeter-image {
+  background: rgba(245, 241, 232, calc(0.72 + var(--badge-pop) * 0.08));
+  border-color: rgba(234, 158, 66, calc(0.22 + var(--badge-pop) * 0.08));
+  box-shadow:
+    0 0 0 1px rgba(255, 255, 255, 0.05) inset,
+    0 0 0 1px rgba(234, 158, 66, 0.04);
+}
+
+:root:not([data-theme="light"]) .tool-badge--apachejmeter-image .tool-badge__icon {
+  filter: grayscale(0.58) saturate(0.3) brightness(0.92) contrast(1.08);
+}
+
+:root:not([data-theme="light"]) .tool-badge--maven-image,
+:root:not([data-theme="light"]) .tool-badge--linux-image {
+  background: rgba(245, 241, 232, calc(0.72 + var(--badge-pop) * 0.08));
+  border-color: rgba(255, 255, 255, calc(0.18 + var(--badge-pop) * 0.08));
+  box-shadow:
+    0 0 0 1px rgba(255, 255, 255, 0.05) inset,
+    0 0 0 1px rgba(245, 241, 232, 0.04);
+}
+
+:root:not([data-theme="light"]) .tool-badge--maven-image .tool-badge__icon,
+:root:not([data-theme="light"]) .tool-badge--linux-image .tool-badge__icon {
+  filter: grayscale(0.58) saturate(0.3) brightness(0.92) contrast(1.08);
+}
+
+:root:not([data-theme="light"]) .tool-badge--apachejmeter-image:is(:hover, :focus-visible) .tool-badge__icon {
+  filter: grayscale(0) saturate(1.08) brightness(1.06) contrast(1.08);
+  opacity: 1;
+}
+
+:root:not([data-theme="light"]) .tool-badge--maven-image:is(:hover, :focus-visible) .tool-badge__icon,
+:root:not([data-theme="light"]) .tool-badge--linux-image:is(:hover, :focus-visible) .tool-badge__icon {
+  filter: grayscale(0) saturate(1) brightness(1) contrast(1);
+}
+
+.tool-badge--4 {
+  --badge-order: 7;
+  top: 61%;
+  left: 48%;
+}
+
+.tool-badge--5 {
+  --badge-order: 9;
+  bottom: 19%;
+  left: 20%;
+}
+
+.tool-badge--6 {
+  --badge-order: 8;
+  bottom: 24%;
+  left: 30%;
+}
+
+.tool-badge--7 {
+  --badge-order: 1;
+  top: 30%;
+  right: 27%;
+}
+
+.tool-badge--8 {
+  --badge-order: 6;
+  top: 50%;
+  left: 61%;
+  right: auto;
+  bottom: auto;
+}
+
+.tool-badge--9 {
+  --badge-order: 4;
+  bottom: 23%;
+  right: 15%;
+}
+
+.tool-badge--10 {
+  --badge-order: 2;
+  top: 74%;
+  left: 54%;
+}
+
+.tool-badge--11 {
+  --badge-order: 10;
+  top: 49%;
+  left: 24%;
+}
+
+.tool-badge--12 {
+  z-index: 3;
+  --badge-order: 11;
+  top: 57%;
+  left: 34%;
+  color: rgba(245, 241, 232, 1);
+}
+
+.tool-badge--12 .tool-badge__icon {
+  opacity: 1;
+  transform: scale(1.04);
+  filter: grayscale(1) saturate(0) brightness(1.14) contrast(1.04);
+}
+
+.tool-badge--13 {
+  --badge-order: 12;
+  top: 41%;
+  right: 27%;
+}
+
+.tool-badge--14 {
+  --badge-order: 13;
+  top: 61%;
+  right: 24%;
+}
+
+.tool-badge--15 {
+  --badge-order: 14;
+  top: 29%;
+  left: 36%;
+}
+
+.tool-badge--16 {
+  --badge-order: 15;
+  top: 42%;
+  left: 39%;
+  color: rgba(245, 241, 232, 1);
+}
+
+.tool-badge--16 .tool-badge__icon {
+  filter: brightness(1.18) contrast(1.12);
+}
+
+.tool-badge--17 {
+  --badge-order: 16;
+  top: 49%;
+  right: 17%;
+  left: auto;
+}
+
+.tool-badge--18 {
+  top: 25%;
+  left: 50%;
+  right: auto;
+}
+
+.issue-section--skills.is-visible .tool-badge,
+.issue-section--skills.is-current .tool-badge {
+  will-change: transform, opacity;
+}
+
+.issue-section--skills.is-current .universe-web__image {
+  will-change: transform, opacity, filter;
+}
+
+.issue-section--skills.is-current .tool-badge:is(:hover, :focus-visible) {
+  background: var(--badge-hover-bg, var(--topbar-link-hover-bg));
+  border-color: var(--badge-hover-border, var(--topbar-link-hover-border));
+  box-shadow:
+    0 0 0 1px var(--panel-inset) inset,
+    0 0 24px var(--skills-web-shadow);
+}
+

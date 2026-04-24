@@ -1,0 +1,136 @@
+.topbar {
+  position: fixed;
+  z-index: 60;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.2rem 1.4rem;
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(-14px);
+  transition:
+    opacity 220ms ease,
+    transform 220ms ease;
+}
+
+body:not(.is-hero-active) .topbar {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateY(0);
+}
+
+.brand,
+.topbar-theme,
+.topbar-language,
+.topbar-toggle,
+.topbar-menu > a,
+.topbar-nav a {
+  border-radius: 999px;
+  border: 1px solid var(--topbar-control-border);
+  background: var(--topbar-control-bg);
+  backdrop-filter: blur(12px);
+  padding: 0.72rem 1rem;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  font-size: 0.76rem;
+}
+
+.brand {
+  font-weight: 800;
+}
+
+.topbar-menu {
+  position: relative;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 0.55rem;
+}
+
+.topbar-theme,
+.topbar-language,
+.topbar-toggle {
+  cursor: pointer;
+  color: var(--ink);
+  transition:
+    transform 220ms ease,
+    border-color 220ms ease,
+    background-color 220ms ease;
+}
+
+.topbar-theme {
+  min-width: 3rem;
+  text-align: center;
+}
+
+.topbar-language {
+  min-width: 4.1rem;
+  text-align: center;
+}
+
+.topbar-toggle {
+  min-width: 7rem;
+}
+
+.topbar-theme:hover,
+.topbar-theme:focus-visible,
+.topbar-language:hover,
+.topbar-language:focus-visible,
+.topbar-toggle:hover,
+.topbar-toggle:focus-visible,
+.topbar-menu > a:hover,
+.topbar-menu > a:focus-visible,
+.topbar.is-open .topbar-toggle {
+  transform: translateY(-1px);
+  border-color: var(--topbar-control-hover-border);
+  background: var(--topbar-control-hover-bg);
+}
+
+.topbar-nav {
+  position: absolute;
+  top: calc(100% + 0.65rem);
+  right: 0;
+  min-width: 13rem;
+  padding: 0.4rem;
+  border-radius: 1.2rem;
+  border: 1px solid var(--topbar-panel-border);
+  background: var(--topbar-panel-bg);
+  backdrop-filter: blur(18px);
+  box-shadow:
+    0 20px 44px var(--topbar-panel-shadow),
+    0 0 0 1px var(--topbar-panel-inset) inset;
+  display: grid;
+  gap: 0.35rem;
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(-0.35rem) scale(0.98);
+  transform-origin: top right;
+  transition:
+    opacity 220ms ease,
+    transform 220ms ease;
+}
+
+.topbar.is-open .topbar-nav {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateY(0) scale(1);
+}
+
+.topbar-nav a {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.topbar-nav a:hover,
+.topbar-nav a:focus-visible {
+  border-color: var(--topbar-link-hover-border);
+  background: var(--topbar-link-hover-bg);
+}
+
+main {
+  position: relative;
+}
