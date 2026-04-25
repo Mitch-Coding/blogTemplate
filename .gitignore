@@ -31,3 +31,6 @@ pnpm-debug.log*
 .tmp/
 tmp/
 temp/
+
+CLAUDE.md
+AGENTS.md
