@@ -1,5 +1,11 @@
 import { SITE_CONFIG } from "./content/site/site.config"
 
+declare const process: {
+  env: {
+    NUXT_PUBLIC_SITE_URL?: string
+  }
+}
+
 export default defineNuxtConfig({
   compatibilityDate: "2025-01-01",
   devtools: { enabled: true },
@@ -7,7 +13,7 @@ export default defineNuxtConfig({
   css: ["~/assets/styles/tokens.scss", "~/assets/styles/base.scss"],
   runtimeConfig: {
     public: {
-      siteUrl: "http://localhost:3000",
+      siteUrl: process.env.NUXT_PUBLIC_SITE_URL || "http://localhost:3000",
     },
   },
   app: {
