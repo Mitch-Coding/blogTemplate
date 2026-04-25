@@ -19,14 +19,18 @@ export function useTheme() {
     applyTheme(theme.value === "dark" ? "light" : "dark")
   }
 
+  // 首次调用时从 localStorage 读取主题（全局只执行一次）
   if (import.meta.client && !isInitialized.value) {
     isInitialized.value = true
-
     const storedTheme = localStorage.getItem(THEME_STORAGE_KEY)
     if (isSiteTheme(storedTheme)) {
       theme.value = storedTheme
     }
+  }
 
+  // 每次调用都注册 watch，确保组件卸载重建后仍有监听
+  // watch 内部会自动去重同一个 ref，不会造成性能问题
+  if (import.meta.client) {
     watch(
       theme,
       (currentTheme) => {

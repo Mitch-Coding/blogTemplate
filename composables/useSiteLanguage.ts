@@ -19,14 +19,17 @@ export function useSiteLanguage() {
     language.value = language.value === "zh" ? "en" : "zh"
   }
 
+  // 首次调用时从 localStorage 读取语言（全局只执行一次）
   if (import.meta.client && !isInitialized.value) {
     isInitialized.value = true
-
     const storedLanguage = localStorage.getItem(LANGUAGE_STORAGE_KEY)
     if (isSiteLanguage(storedLanguage)) {
       language.value = storedLanguage
     }
+  }
 
+  // 每次调用都注册 watch，确保组件卸载重建后仍有监听
+  if (import.meta.client) {
     watch(
       language,
       (currentLanguage) => {
