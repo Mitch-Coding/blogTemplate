@@ -2,7 +2,9 @@ import { SITE_CONFIG } from "./content/site/site.config"
 
 declare const process: {
   env: {
+    DEEPSEEK_API_KEY?: string
     NUXT_PUBLIC_SITE_URL?: string
+    PORTFOLIO_SYSTEM_PROMPT?: string
   }
 }
 
@@ -12,6 +14,8 @@ export default defineNuxtConfig({
   modules: ["@nuxt/content"],
   css: ["~/assets/styles/tokens.scss", "~/assets/styles/base.scss"],
   runtimeConfig: {
+    deepseekApiKey: process.env.DEEPSEEK_API_KEY || "",
+    portfolioSystemPrompt: process.env.PORTFOLIO_SYSTEM_PROMPT || "",
     public: {
       siteUrl: process.env.NUXT_PUBLIC_SITE_URL || "http://localhost:3000",
     },

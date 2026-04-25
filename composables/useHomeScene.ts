@@ -21,7 +21,7 @@ export function useHomeScene() {
   let heroPeel: any = null
   let heroPeelTime = 0
   let handleResize: (() => void) | null = null
-  let peelRetryTimer: ReturnType<typeof window.setTimeout> | null = null
+  let peelRetryTimer: number | null = null
   let peelResizeObserver: ResizeObserver | null = null
 
   const getSkillBadges = () => [...document.querySelectorAll<HTMLElement>(".issue-section--skills .tool-badge")]
