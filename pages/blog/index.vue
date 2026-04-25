@@ -132,7 +132,7 @@ useHead({
         </div>
         <hr class="blog-hero__rule" />
         <p class="blog-hero__desc">
-          聚焦 Java 后端、AI 应用开发与工程实践：从服务稳定性、接口设计到 RAG/LLM 落地。
+          欢迎来到Mitch的博客！在这里，我分享关于编程、技术和个人成长的见解和经验。
         </p>
       </div>
     </section>

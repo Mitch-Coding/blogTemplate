@@ -42,6 +42,7 @@
   height: auto;
   user-select: none;
   -webkit-user-drag: none;
+  filter: var(--hero-spider-filter);
 }
 
 .hero-poster-shell {
