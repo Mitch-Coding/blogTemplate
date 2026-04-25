@@ -117,15 +117,24 @@ onMounted(() => {
           <hr class="post-header__rule" />
         </header>
 
-        <ContentRenderer
-          :value="postMeta"
-          tag="div"
-          class="post-content"
-          id="post-content"
-          ref="contentRef"
-        />
+        <div id="post-content" ref="contentRef" class="post-content">
+          <ContentRenderer :value="postMeta" />
+        </div>
 
         <BlogPostNav :previous-post="previousPost" :next-post="nextPost" />
+
+        <section class="post-contact" aria-label="联系 Mitch">
+          <p class="post-contact__heading">{{ BLOG_COPY.contactHeading }}</p>
+          <p class="post-contact__copy">{{ BLOG_COPY.contactCopy }}</p>
+          <div class="post-contact__links">
+            <a class="post-contact__link" :href="`mailto:${CONTACT_EMAIL}`">
+              {{ BLOG_COPY.contactEmailLabel }}
+            </a>
+            <a class="post-contact__link" :href="CONTACT_GITHUB_URL" target="_blank" rel="noreferrer">
+              {{ BLOG_COPY.contactGithubLabel }}
+            </a>
+          </div>
+        </section>
       </article>
 
       <BlogPostToc :active-id="activeHeadingId" :items="tocItems" />

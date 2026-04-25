@@ -2,7 +2,7 @@ import type { SiteNavItem } from "~/types/site"
 
 const NAV_LABELS = {
   home: { zh: "首页", en: "Home" },
-  blog: { zh: "博客", en: "Blog" },
+  blog: { zh: "写作", en: "Writing" },
 } as const
 
 export function usePrimaryNav() {

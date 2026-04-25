@@ -131,7 +131,9 @@ useHead({
           <img class="blog-hero__spiderman" src="/spiderman.svg" alt="" aria-hidden="true" decoding="async" />
         </div>
         <hr class="blog-hero__rule" />
-        <p class="blog-hero__desc">所有我认为值得记录的东西。</p>
+        <p class="blog-hero__desc">
+          聚焦 Java 后端、AI 应用开发与工程实践：从服务稳定性、接口设计到 RAG/LLM 落地。
+        </p>
       </div>
     </section>
 

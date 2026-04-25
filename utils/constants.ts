@@ -130,13 +130,18 @@ export const BLOG_COPY = {
   postLoadError: "文章加载失败",
   sidebarAboutHeading: "ABOUT",
   sidebarAbout:
-    "Java 后端 + AI 应用开发者，这里记录学习过程中的实践与思考。",
+    "Java 后端 + AI 应用开发者。这里记录服务稳定性、AI 能力落地和工程实践。",
+  sidebarStartHereHeading: "START HERE",
   sidebarCategoriesHeading: "CATEGORIES",
   sidebarTagsHeading: "TAGS",
   sidebarRecentHeading: "RECENT",
   sidebarError: "侧边栏加载失败。",
   tocHeading: "ON THIS PAGE",
   copyLinkAria: "复制链接",
+  contactHeading: "CONTACT",
+  contactCopy: "如果你想聊 Java 后端、AI 应用开发或工程落地，可以直接联系我。",
+  contactEmailLabel: "Email",
+  contactGithubLabel: "GitHub",
 } as const
 
 export const BLOG_API_ERROR_MESSAGES = {

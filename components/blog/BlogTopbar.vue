@@ -61,6 +61,7 @@ onBeforeUnmount(() => {
         Issues
       </button>
       <nav class="topbar-nav" id="topbar-nav" aria-label="Primary">
+        <NuxtLink to="/blog" @click="closeMenu">Writing</NuxtLink>
         <a href="/#about" @click="closeMenu">About</a>
         <a href="/#skills" @click="closeMenu">Skill Universe</a>
         <a href="/#projects" @click="closeMenu">Projects</a>

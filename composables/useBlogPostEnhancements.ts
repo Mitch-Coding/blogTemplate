@@ -51,6 +51,8 @@ export function useBlogPostEnhancements(contentRef: Ref<HTMLElement | null>) {
 
   const enhanceContent = async () => {
     await nextTick()
+    await new Promise<void>((resolve) => requestAnimationFrame(() => resolve()))
+    await nextTick()
 
     const content = contentRef.value
     if (!content) {

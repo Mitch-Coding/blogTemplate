@@ -9,7 +9,7 @@ export const HOME_PAGE_CONTENT: HomeContentConfig = {
   topbar: {
     brand: "MITCH",
     blogHref: "/blog.html",
-    blogLabel: "Blog",
+    blogLabel: "Writing",
     issuesLabel: "Issues",
     navItems: [
       { href: "#about", label: "About" },

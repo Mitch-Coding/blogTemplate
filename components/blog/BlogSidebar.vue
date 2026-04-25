@@ -11,6 +11,8 @@ const truncateTitle = (title: string, maxLength = BLOG_SIDEBAR_TITLE_MAX_LENGTH)
   if (title.length <= maxLength) return title
   return `${title.slice(0, maxLength)}...`
 }
+
+const pinnedPosts = computed(() => props.recentPosts.filter((post) => post.pinned))
 </script>
 
 <template>
@@ -18,6 +20,21 @@ const truncateTitle = (title: string, maxLength = BLOG_SIDEBAR_TITLE_MAX_LENGTH)
     <section class="blog-sidebar__section">
       <h2 class="blog-sidebar__heading">{{ BLOG_COPY.sidebarAboutHeading }}</h2>
       <p class="blog-sidebar__about">{{ BLOG_COPY.sidebarAbout }}</p>
+    </section>
+
+    <section v-if="pinnedPosts.length > 0" class="blog-sidebar__section">
+      <h2 class="blog-sidebar__heading">{{ BLOG_COPY.sidebarStartHereHeading }}</h2>
+      <ul class="blog-sidebar__recent">
+        <li
+          v-for="post in pinnedPosts"
+          :key="post.slug"
+          class="blog-sidebar__recent-item"
+        >
+          <NuxtLink class="blog-sidebar__recent-link" :to="`/blog/${encodeURIComponent(post.slug)}`">
+            <span class="blog-sidebar__recent-title">{{ truncateTitle(post.title) }}</span>
+          </NuxtLink>
+        </li>
+      </ul>
     </section>
 
     <section class="blog-sidebar__section">
