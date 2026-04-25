@@ -25,3 +25,6 @@ jobs:
 
       - name: Run check
         run: npm run check
+
+      - name: Run smoke tests
+        run: npm run test
