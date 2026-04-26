@@ -1,7 +1,7 @@
 {
-  "name": "eiddie-portfolio",
+  "name": "mitch-blog",
   "private": true,
-  "version": "0.0.1",
+  "version": "0.2.22",
   "type": "module",
   "scripts": {
     "dev": "nuxt dev --host 127.0.0.1 --port 3000",
