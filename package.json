@@ -30,5 +30,8 @@
     "gray-matter": "^4.0.3",
     "pngjs": "^7.0.0",
     "simple-icons": "^16.14.0"
+  },
+  "overrides": {
+    "rollup-plugin-visualizer": "^6.0.0"
   }
 }
