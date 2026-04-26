@@ -16,7 +16,7 @@ export const SKILL_BADGE_IDS: Record<string, number> = Object.freeze({
   LINUX: 13,
   GITHUB: 14,
   CURSOR: 15,
-  ALIBABA_CLOUD: 16,
+  MYSQL: 16,
   LANGCHAIN: 17,
   KEIL5: 18,
 })
@@ -146,9 +146,9 @@ export const SKILL_BADGES = Object.freeze([
     style: "--icon: url('/skill-icons/cursor.svg'); --icon-hover: linear-gradient(180deg, #ffffff 0%, #9ea4ff 100%); --badge-hover-bg: rgba(124, 132, 255, 0.11); --badge-hover-border: rgba(158, 164, 255, 0.3);",
   }),
   createSkillBadgeDefinition({
-    id: SKILL_BADGE_IDS.ALIBABA_CLOUD,
-    label: "Alibaba Cloud",
-    style: "--icon: url('/skill-icons/aliyun.svg'); --icon-hover: #ff6a1a; --badge-hover-bg: rgba(255, 106, 26, 0.08); --badge-hover-border: rgba(255, 127, 45, 0.32);",
+    id: SKILL_BADGE_IDS.MYSQL,
+    label: "MySQL",
+    style: "--icon: url('/skill-icons/mysql.svg'); --icon-hover: linear-gradient(135deg, #00758f 0 64%, #f29111 64% 100%); --badge-hover-bg: rgba(0, 117, 143, 0.1); --badge-hover-border: rgba(242, 145, 17, 0.34);",
   }),
 ])
 
@@ -158,7 +158,7 @@ const SKILL_BADGE_SEQUENCE_KEYS = [
   "UBUNTU",
   "GIT",
   "MAVEN",
-  "ALIBABA_CLOUD",
+  "MYSQL",
   "CLOUDFLARE",
   "CODEX",
   "SPRING",
