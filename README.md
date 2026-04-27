@@ -1,6 +1,6 @@
 
 博客效果 : [MITCH](https://xiaomaizhi.me/)  
-主页UI布局设计 : [EIDDIE]https://github.com/eiddiedev
+主页UI布局设计 : [EIDDIE](https://github.com/eiddiedev)
 
 # Nuxt Content Portfolio Blog
 
