@@ -4,7 +4,6 @@ dist/
 .output/
 .data/
 .codex/
-docs/
 private/
 
 .DS_Store
