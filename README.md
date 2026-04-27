@@ -1,5 +1,7 @@
 
-博客效果 : [MITCH](https://xiaomaizhi.me/)  
+Author: [MITCH](https://xiaomaizhi.me/)  
+
+模板效果: [example.dev](https://blogtemplate-67j.pages.dev/)  
 主页UI布局设计 : [EIDDIE](https://github.com/eiddiedev)
 
 # Nuxt Content Portfolio Blog
