@@ -92,7 +92,8 @@ export interface HomeContentConfig {
     email: string
     githubUrl: string
     githubLabel: string
-    wechatId: string
+    linkedinUrl: string
+    linkedinLabel: string
     resumePath: string
     links: ContactLinkConfig[]
   }

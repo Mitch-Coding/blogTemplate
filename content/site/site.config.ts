@@ -1,14 +1,14 @@
 export const SITE_CONFIG = {
-  name: "Mitch",
-  title: "Mitch",
-  author: "Mitch",
+  name: "Portfolio Blog Starter",
+  title: "Portfolio Blog Starter",
+  author: "Example Author",
   locale: "zh-CN",
   description:
-    "Mitch 的个人站点与技术博客，聚焦 Java 后端、AI 应用开发、系统稳定性与工程落地。",
-  blogTitle: "Mitch | Blog",
-  blogDescription: "Technical notes and writing by Mitch.",
+    "一个基于 Nuxt 3 和 @nuxt/content 的开源作品集与技术博客模板。",
+  blogTitle: "Portfolio Blog Starter | Blog",
+  blogDescription: "Example technical notes for a Nuxt 3 portfolio blog starter.",
   keywords: [
-    "Mitch",
+    "portfolio blog",
     "Java backend",
     "AI application",
     "Spring Boot",
