@@ -1,5 +1,7 @@
 <script setup lang="ts">
 import { HOME_PAGE_CONTENT } from "~/content/site/home.config"
+
+const projectButtonClass = (variant: string) => `project-card__button project-card__button--${variant}`
 </script>
 
 <template>
@@ -21,7 +23,26 @@ import { HOME_PAGE_CONTENT } from "~/content/site/home.config"
     </div>
 
     <div class="projects-stage projects-stage--right">
-      <div class="project-grid"></div>
+      <div class="project-grid">
+        <article
+          v-for="project in HOME_PAGE_CONTENT.projects.items"
+          :key="project.id"
+          class="project-card"
+        >
+          <a
+            :class="projectButtonClass(project.variant)"
+            :href="project.href"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <span class="project-card__impact" aria-hidden="true">{{ project.impact }}</span>
+            <span class="project-card__index">{{ project.index }}</span>
+            <strong>{{ project.title }}</strong>
+            <span class="project-card__type">{{ project.type }}</span>
+            <p>{{ project.summary }}</p>
+          </a>
+        </article>
+      </div>
     </div>
   </section>
 </template>

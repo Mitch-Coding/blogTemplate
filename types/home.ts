@@ -33,6 +33,17 @@ export interface HomeFactItem {
   body: LocalizedText
 }
 
+export interface HomeProjectItem {
+  id: string
+  index: string
+  title: string
+  type: string
+  summary: string
+  impact: string
+  href: string
+  variant: string
+}
+
 export interface ContactLinkConfig {
   type: "copy" | "link"
   key: string
@@ -79,7 +90,7 @@ export interface HomeContentConfig {
   projects: {
     eyebrow: string
     title: string
-    activeProjectIds: string[]
+    items: HomeProjectItem[]
   }
   contact: {
     eyebrow: string
