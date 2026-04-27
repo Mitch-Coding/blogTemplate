@@ -8,14 +8,17 @@ import { HOME_PAGE_CONTENT } from "~/content/site/home.config"
       <div>
         <p class="eyebrow">{{ HOME_PAGE_CONTENT.name.eyebrow }}</p>
         <h2>
-          {{ HOME_PAGE_CONTENT.name.headingPrefix }}<span class="name-heading-h">H<img class="name-heading-spider" src="/noun-spider-8112812.svg" alt="" aria-hidden="true" /></span>
+          <template v-for="row in HOME_PAGE_CONTENT.name.rows" :key="`heading-${row.letter}`">
+            <span v-if="row.letter === 'H'" class="name-heading-h">{{ row.letter }}<img class="name-heading-spider" src="/noun-spider-8112812.svg" alt="" aria-hidden="true" /></span>
+            <span v-else>{{ row.letter }}</span>
+          </template>
         </h2>
       </div>
       <p class="section-summary">{{ HOME_PAGE_CONTENT.name.summary }}</p>
     </div>
 
     <div class="name-poster">
-      <div class="name-stack" aria-label="MITCH breakdown">
+      <div class="name-stack" :aria-label="`${HOME_PAGE_CONTENT.name.headingPrefix} breakdown`">
         <span class="name-ghost" aria-hidden="true">
           <span
             v-for="row in HOME_PAGE_CONTENT.name.rows"

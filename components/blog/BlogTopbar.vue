@@ -39,7 +39,7 @@ onBeforeUnmount(() => {
 
 <template>
   <header ref="rootRef" class="blog-topbar topbar" :class="{ 'is-open': isOpen, 'is-scrolled': isScrolled }" id="blog-topbar">
-    <NuxtLink class="brand" to="/" aria-label="Go to top">MITCH</NuxtLink>
+    <NuxtLink class="brand" to="/" aria-label="Go to top">AUTHOR</NuxtLink>
     <div class="topbar-menu">
       <button
         class="topbar-theme"

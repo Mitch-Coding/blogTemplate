@@ -5,10 +5,9 @@ const { language } = useSiteLanguage()
 
 const feedback = reactive<Record<string, "" | "is-copied" | "is-copy-failed">>({
   mail: "",
-  wechat: "",
 })
 
-const copyText = async (key: "mail" | "wechat", value: string) => {
+const copyText = async (key: "mail", value: string) => {
   let copied = false
 
   if (navigator.clipboard?.writeText) {
@@ -183,16 +182,14 @@ onMounted(() => {
               </svg>
             </span>
           </a>
-          <button
+          <a
             class="contact-link contact-link--wechat contact-link--copy"
-            :class="feedback.wechat"
-            type="button"
-            :data-copy-value="HOME_PAGE_CONTENT.contact.wechatId"
-            data-copy-status="COPIED"
-            :aria-label="language === 'zh' ? '复制微信号' : 'Copy WeChat ID'"
-            @click="copyText('wechat', HOME_PAGE_CONTENT.contact.wechatId)"
+            :href="HOME_PAGE_CONTENT.contact.linkedinUrl"
+            target="_blank"
+            rel="noreferrer"
+            :aria-label="language === 'zh' ? '打开 LinkedIn' : 'Open LinkedIn'"
           >
-            <span class="contact-link__label">WeChat / {{ HOME_PAGE_CONTENT.contact.wechatId }}</span>
+            <span class="contact-link__label">LinkedIn / {{ HOME_PAGE_CONTENT.contact.linkedinLabel }}</span>
             <span class="contact-link__icon" aria-hidden="true">
               <svg viewBox="0 0 24 24" fill="none">
                 <path d="M10 5.1c-4.14 0-7.5 2.7-7.5 6.03c0 1.78.95 3.38 2.46 4.49L4.2 19.3l3.7-1.84c.68.18 1.39.28 2.1.28c4.14 0 7.5-2.7 7.5-6.03S14.14 5.1 10 5.1Z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round" />
@@ -203,7 +200,7 @@ onMounted(() => {
                 <circle cx="17.7" cy="13.3" r="0.82" fill="#090909" />
               </svg>
             </span>
-          </button>
+          </a>
           <a
             class="contact-link contact-link--resume"
             :href="HOME_PAGE_CONTENT.contact.resumePath"

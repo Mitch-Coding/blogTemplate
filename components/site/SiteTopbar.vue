@@ -15,7 +15,7 @@ const brandSubtitle = computed(() =>
   <header class="site-topbar" :data-variant="variant ?? 'default'">
     <div class="site-topbar__inner">
       <NuxtLink to="/" class="site-topbar__brand">
-        <span class="site-topbar__eyebrow">Mitch</span>
+        <span class="site-topbar__eyebrow">Starter</span>
         <strong class="site-topbar__title">{{ brandSubtitle }}</strong>
       </NuxtLink>
 
