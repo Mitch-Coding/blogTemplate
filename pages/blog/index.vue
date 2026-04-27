@@ -132,7 +132,7 @@ useHead({
         </div>
         <hr class="blog-hero__rule" />
         <p class="blog-hero__desc">
-          欢迎来到Mitch的博客！在这里，我分享关于编程、技术和个人成长的见解和经验。
+          欢迎来到示例博客。这里展示 Nuxt 3、内容管理、部署和工程实践文章的模板效果。
         </p>
       </div>
     </section>

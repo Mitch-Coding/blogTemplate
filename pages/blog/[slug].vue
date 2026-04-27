@@ -52,7 +52,7 @@ const {
 } = useBlogPostEnhancements(contentRef)
 
 useSeoMeta({
-  title: `${postMeta.title} | Mitch`,
+  title: `${postMeta.title} | ${SITE_CONFIG.name}`,
   description: postMeta.description || postMeta.excerpt,
   ogTitle: postMeta.title,
   ogDescription: postMeta.description || postMeta.excerpt,
@@ -123,7 +123,7 @@ onMounted(() => {
 
         <BlogPostNav :previous-post="previousPost" :next-post="nextPost" />
 
-        <section class="post-contact" aria-label="联系 Mitch">
+        <section class="post-contact" aria-label="联系示例作者">
           <p class="post-contact__heading">{{ BLOG_COPY.contactHeading }}</p>
           <p class="post-contact__copy">{{ BLOG_COPY.contactCopy }}</p>
           <div class="post-contact__links">

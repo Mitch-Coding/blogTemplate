@@ -1,13 +1,13 @@
 import { expect, test } from "playwright/test"
 
 const articleSlug = "deepseek-api-integration"
-const articleTitle = "DeepSeek API 集成实战：流式响应、并发控制与成本优化"
+const articleTitle = "Nuxt 3 中接入 AI 助手的示例实现"
 
 test("home page opens", async ({ request }) => {
   const response = await request.get("/")
 
   expect(response.status()).toBe(200)
-  await expect(response.text()).resolves.toContain("Mitch")
+  await expect(response.text()).resolves.toContain("Example Author")
 })
 
 test("blog list opens and shows articles", async ({ request }) => {
