@@ -310,9 +310,11 @@
 }
 
 .blog-post-item__pin {
-  font-size: 0.5rem;
-  color: var(--yellow);
-  line-height: 1;
+  display: inline-block;
+  width: 1rem;
+  height: 1rem;
+  background-color: var(--yellow);
+  mask: url("/icons/cuida--pin-outline.svg") center / contain no-repeat;
 }
 
 .blog-post-item__title {

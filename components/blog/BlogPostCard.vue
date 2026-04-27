@@ -16,7 +16,12 @@ defineProps<{
       <div class="blog-post-item__meta">
         <time class="blog-post-item__date" :datetime="post.date">{{ post.date }}</time>
         <span class="blog-post-item__category">{{ post.category }}</span>
-        <span v-if="post.pinned" class="blog-post-item__pin" :aria-label="BLOG_COPY.pinnedAria">●</span>
+        <span
+          v-if="post.pinned"
+          class="blog-post-item__pin"
+          role="img"
+          :aria-label="BLOG_COPY.pinnedAria"
+        ></span>
       </div>
       <h2 class="blog-post-item__title">{{ post.title }}</h2>
       <p class="blog-post-item__excerpt">{{ post.excerpt }}</p>
