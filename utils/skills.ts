@@ -28,11 +28,30 @@ interface SkillBadgeDefinition {
   extraClasses: readonly string[]
 }
 
+const OPEN_SOURCE_SKILL_ICONS = [
+  "/skill-icons/git.svg",
+  "/skill-icons/github.svg",
+  "/skill-icons/simpleicons.svg",
+] as const
+
+const OPEN_SOURCE_SKILL_LABELS = [
+  "Git",
+  "GitHub",
+  "Simple Icons",
+] as const
+
+const getOpenSourceSkillIndex = (badgeId: number) => (badgeId - 1) % OPEN_SOURCE_SKILL_ICONS.length
+
+const getOpenSourceSkillIconStyle = (badgeId: number) =>
+  `--icon: url('${OPEN_SOURCE_SKILL_ICONS[getOpenSourceSkillIndex(badgeId)]}'); --icon-hover: #050505; --icon-size: calc(100% - 0.7rem);`
+
+const getOpenSourceSkillLabel = (badgeId: number) =>
+  OPEN_SOURCE_SKILL_LABELS[getOpenSourceSkillIndex(badgeId)]
+
 const createSkillBadgeDefinition = ({
   id,
   label,
   style,
-  extraClasses = [],
 }: {
   id: number
   label: string
@@ -41,9 +60,9 @@ const createSkillBadgeDefinition = ({
 }): SkillBadgeDefinition =>
   Object.freeze({
     id,
-    label,
-    style,
-    extraClasses: Object.freeze([...extraClasses]),
+    label: getOpenSourceSkillLabel(id),
+    style: `${style} ${getOpenSourceSkillIconStyle(id)}`,
+    extraClasses: Object.freeze([]),
   })
 
 // 这里收敛每个 badge 的静态数据入口：
