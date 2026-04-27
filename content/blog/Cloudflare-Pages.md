@@ -13,7 +13,7 @@ tags:
   - Nuxt Content
 date: 2026-04-26
 readingTime: 10
-pinned: false
+pinned: ture
 ---
 
 ## 背景
