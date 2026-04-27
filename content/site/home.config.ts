@@ -71,24 +71,24 @@ export const HOME_PAGE_CONTENT: HomeContentConfig = {
         en: "Ask the spider something about me!",
       },
       defaultStatus: {
-        zh: "问我点真的。",
-        en: "Ask something real.",
+        zh: "问我点技术活儿的吧，兄弟",
+        en: "Bro, ask me some technical questions.",
       },
       emptyQuestion: {
-        zh: "先输入一个和 Mitch 相关的问题，我再继续回答。",
+        zh: "先输入一个和 Mitch 相关的问题，小蜘蛛我再继续回答",
         en: "Enter a question about Mitch first, then I can answer it.",
       },
       loadingStatus: {
-        zh: "小蜘蛛正在编织回答，只回答和 Mitch 本人、经历、技能、项目、合作方式相关的问题哦。",
+        zh: "小蜘蛛正在编织回答，只回答和 Mitch 本人、经历、技能、项目、合作方式相关的问题哦",
         en: "DeepSeek is generating an answer and will stay focused on Mitch, his background, skills, projects, and collaboration style.",
       },
       followUpStatus: {
-        zh: "也可以继续换个问法，直接聊我做的项目、技能和合作方式。",
+        zh: "也可以继续换个问法，直接聊我做的项目、技能和合作方式",
         en: "Try another angle if you want. We can keep talking about projects, skills, or how I work.",
       },
       requestError: {
-        zh: "暂时无法连接 DeepSeek，已先切回预设回答。",
-        en: "DeepSeek is unavailable right now. Reverted to the default answer.",
+        zh: "小蜘蛛宕机了，已先切回预设回答，过会儿再试试吧",
+        en: "The little spider crashed. I've switched back to the preset replies. Try again later, dude.",
       },
       placeholder: {
         zh: "比如：如果我想和你一起做 AI 产品，你会先从哪里开始？",
@@ -109,12 +109,12 @@ export const HOME_PAGE_CONTENT: HomeContentConfig = {
       questions: [
         {
           label: {
-            zh: "你最想做什么样的项目？",
-            en: "What kinds of projects do you most want to build?",
+            zh: "你做过哪些 AI 应用项目？",
+            en: "What AI application projects have you worked on?",
           },
           answer: {
-            zh: "我更喜欢做那些有明确个性和记忆点的项目。对我来说，好的产品不是把功能机械拼起来，而是能让人一眼记住、愿意继续用下去。我会更容易被那种有方向感、有表达欲、同时又真的能落地的项目吸引。",
-            en: "I'm drawn to projects with a clear identity and a strong memory to them. I don't just want to stack features. I want to build things that people remember quickly and keep using. I'm especially interested in projects that have direction, personality, and real execution behind them.",
+            zh: "我主要关注 AI 应用落地，实践过、智能客服、文档解析、Agent 工具调用、业务系统 AI 集成 等方向。我更关注的不只是“调模型接口”，而是如何把 AI 能力和真实业务流程结合起来，形成稳定、可用、可维护的产品能力。",
+            en: "I focus on AI application implementation and have experience in intelligent customer service, document parsing, Agent tool calls, and business system AI integration. I'm more concerned with how to combine AI capabilities with real business processes to create stable, usable, and maintainable product features, rather than just 'calling model APIs.'",
           },
         },
         {
@@ -123,28 +123,28 @@ export const HOME_PAGE_CONTENT: HomeContentConfig = {
             en: "What tools and technologies do you use most?",
           },
           answer: {
-            zh: "我更习惯用全栈的方式去做产品，而不是只负责其中一个环节。前端、后端、数据库、AI 接入、部署上线这些部分我都能自己接起来，所以我可以把一个想法从 demo 一路推进到真正可用的版本。比起分得很细，我更擅长把整条链路做完整。",
-            en: "I work in a full-stack way instead of owning only one slice of the product. I can connect frontend, backend, databases, AI integration, and deployment myself, which lets me take an idea from demo to something people can actually use. I'm strongest when I can carry the whole chain through.",
+            zh: "我主要用 Java 技术栈做后端服务，用大模型技术做 AI 应用落地。后端熟悉 Spring Boot、Redis、MySQL；AI 方向熟悉 OpenAI API、Spring AI、LangChain、向量数据库和 RAG，能把大模型能力接入实际业务场景，比如知识库问答、智能客服和自动化助手。",
+            en: "I mainly use the Java technology stack for the backend services and employ large model technology for the implementation of AI applications. I am familiar with Spring Boot, Redis, MySQL, etc. in the backend; in the AI direction, I am proficient in OpenAI API, Spring AI, LangChain, vector databases, and RAG, and can integrate the capabilities of large models into actual business scenarios, such as knowledge base question answering, intelligent customer service, and automated assistants.",
           },
         },
         {
           label: {
-            zh: "你做产品时最在意什么？",
-            en: "What matters most to you when building a product?",
+            zh: "你想和什么团队一起开发？",
+            en: "What kinds of teams do you work best with?",
           },
           answer: {
-            zh: "我最在意的是一个产品最后能不能成立，而不是只停留在一个好看的想法上。成立意味着逻辑清楚、体验顺畅、细节可靠，也意味着它真的能被用户持续使用。对我来说，完成度和真实可用性比表面的热闹更重要。",
-            en: "What matters most to me is whether a product truly holds up in the end, not whether it only starts as an attractive idea. That means the logic is clear, the experience is smooth, the details are reliable, and people can keep using it over time. Real usability and finish matter more to me than surface-level excitement.",
-          },
-        },
-        {
-          label: {
-            zh: "你想和什么样的人一起做事？",
-            en: "What kind of people do you want to work with?",
-          },
-          answer: {
-            zh: "我喜欢和有创造力、有判断力、也有执行力的人一起做事。最好是那种愿意交流、也真的想把事情做成的人，而不是只按部就班地完成任务。像乔布斯说的“the crazy ones”，那种有灵魂、有想法的人会让我很有共鸣。",
+            zh: "我想我适合需要 后端开发能力、AI 应用集成能力和产品落地意识 的团队。我能参与从需求分析、接口设计、功能开发到部署优化的完整过程，也愿意和产品、前端、算法或业务团队一起推进结果。我关注的不只是完成任务，而是把事情做稳定、做清楚、做得长期可维护。",
             en: "I like working with people who have ideas, judgment, and real execution. Ideally they're willing to communicate and genuinely want to build something meaningful, not just complete a checklist. That crazy-ones energy still matters to me when I choose collaborators.",
+          },
+        },
+        {
+          label: {
+            zh: "你如何保证项目稳定落地？",
+            en: "How do you ensure projects are delivered reliably?",
+          },
+          answer: {
+            zh: "我会先把核心业务流程和边界梳理清楚，再做接口设计、数据结构设计和模块拆分。开发过程中会关注 异常处理、日志、性能、权限、监控、可扩展性和可维护性。对 AI 应用来说，我也会特别关注回答质量、知识库更新、召回效果、失败兜底和人工可干预机制，避免只做一个 Demo。",
+            en: "I will first clarify the core business processes and boundaries, then proceed with interface design, data structure design, and module decomposition. During development, I will pay attention to exception handling, logging, performance, permissions, monitoring, scalability, and maintainability. For AI applications, I will also particularly focus on answer quality, knowledge base updates, recall effectiveness, failure fallbacks, and manual intervention mechanisms to avoid creating just a demo.",
           },
         },
       ],
@@ -186,7 +186,7 @@ export const HOME_PAGE_CONTENT: HomeContentConfig = {
     githubUrl: "https://github.com/Mitch-Coding",
     githubLabel: "github.com/Mitch-Coding",
     wechatId: "xiaomaizhi_Lee",
-    resumePath: "/resume/jia-yongshuo-ai-application-developer.pdf",
+    resumePath: "/resume/LIJIN_resume.pdf",
     links: [
       {
         type: "copy",
@@ -229,7 +229,7 @@ export const HOME_PAGE_CONTENT: HomeContentConfig = {
         key: "resume",
         label: "Resume / PDF",
         value: "",
-        href: "/resume/jia-yongshuo-ai-application-developer.pdf",
+        href: "/resume/LIJIN_resume.pdf",
         copyStatus: "",
         ariaLabel: {
           zh: "打开简历 PDF",
