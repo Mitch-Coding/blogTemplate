@@ -1,4 +1,4 @@
-.project-grid {
+﻿.project-grid {
   position: relative;
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
@@ -969,7 +969,7 @@
 }
 
 .project-card__button--logo-burst .project-card__logo-mark::before {
-  background: center / contain no-repeat var(--cover-logo-asset, url("/projects/edreading/edreading-logo-icon.png"));
+  background: center / contain no-repeat var(--cover-logo-asset, url("/about-spider-prompt.png"));
   filter:
     grayscale(1)
     saturate(0.12)
@@ -1165,7 +1165,7 @@
   transform: translate3d(0.1rem, -0.06rem, 0);
 }
 
-.project-card__button--scriptmind-wave {
+.project-card__button--sample-wave-wave {
   --hover-shift-x: -0.04rem;
   --hover-lift: -1.12rem;
   --hover-rotate: 1.2deg;
@@ -1205,7 +1205,7 @@
   --impact-clip: polygon(6% 18%, 90% 12%, 98% 42%, 90% 74%, 52% 78%, 40% 92%, 34% 78%, 8% 74%, 2% 42%);
 }
 
-.project-card__button--scriptmind-wave::before {
+.project-card__button--sample-wave-wave::before {
   background-image:
     linear-gradient(180deg, rgba(7, 12, 34, 0.08) 0%, rgba(7, 12, 34, 0.3) 100%),
     var(--cover-art-asset, none);
@@ -1220,14 +1220,14 @@
   transform: scale(1.02);
 }
 
-.project-card__button--scriptmind-wave::after {
+.project-card__button--sample-wave-wave::after {
   inset: 1% 0 10% 0;
   opacity: 0;
   transform: translate3d(0, -0.08rem, 0) scale(0.94);
   filter: grayscale(1) saturate(0) blur(1px);
 }
 
-.project-card__button--scriptmind-wave .project-card__cover-panel {
+.project-card__button--sample-wave-wave .project-card__cover-panel {
   inset: 0;
   border: none;
   border-radius: inherit;
@@ -1246,13 +1246,13 @@
   mask-image: linear-gradient(180deg, #000 0 74%, rgba(0, 0, 0, 0.96) 82%, rgba(0, 0, 0, 0.58) 92%, transparent 100%);
 }
 
-.project-card__button--scriptmind-wave .project-card__cover-burst {
+.project-card__button--sample-wave-wave .project-card__cover-burst {
   opacity: 0;
   transform: scale(0.92);
   filter: grayscale(1) saturate(0);
 }
 
-.project-card__button--scriptmind-wave .project-card__cover-dots {
+.project-card__button--sample-wave-wave .project-card__cover-dots {
   inset: 0;
   clip-path: none;
   opacity: 0;
@@ -1260,7 +1260,7 @@
   mix-blend-mode: normal;
 }
 
-.project-card__button--scriptmind-wave .project-card__cover-rays {
+.project-card__button--sample-wave-wave .project-card__cover-rays {
   inset: -20% -14% 2% -14%;
   opacity: 0;
   transform: scale(0.98) rotate(-3deg);
@@ -1268,7 +1268,7 @@
   mix-blend-mode: normal;
 }
 
-.project-card__button--scriptmind-wave .project-card__cover-bubble {
+.project-card__button--sample-wave-wave .project-card__cover-bubble {
   display: none;
   inset: -36% 8% 66% 48%;
   opacity: 0;
@@ -1276,23 +1276,23 @@
   filter: grayscale(1) saturate(0);
 }
 
-.project-card__button--scriptmind-wave .project-card__cover-fragments {
+.project-card__button--sample-wave-wave .project-card__cover-fragments {
   opacity: 0;
   transform: scale(0.92) rotate(-3deg);
   filter: grayscale(1) saturate(0);
 }
 
-.project-card__button--scriptmind-wave .project-card__logo::before {
+.project-card__button--sample-wave-wave .project-card__logo::before {
   inset: 14% 12% 8%;
   opacity: 0.12;
   transform: rotate(-6deg) scale(0.92);
 }
 
-.project-card__button--scriptmind-wave .project-card__logo-mark {
+.project-card__button--sample-wave-wave .project-card__logo-mark {
   transform: translateY(0.72rem);
 }
 
-.project-card__button--scriptmind-wave .project-card__logo-mark::before {
+.project-card__button--sample-wave-wave .project-card__logo-mark::before {
   filter:
     grayscale(1)
     saturate(0)
@@ -1303,14 +1303,14 @@
   z-index: 2;
 }
 
-.project-card__button--scriptmind-wave .project-card__logo-mark::after {
+.project-card__button--sample-wave-wave .project-card__logo-mark::after {
   inset: 0;
   background: linear-gradient(135deg, #79eaff 0%, #ffffff 42%, #ffb164 68%, #ff7d2f 100%);
-  -webkit-mask-image: var(--cover-logo-asset, url("/projects/scriptmind/scriptmind-logo.png"));
+  -webkit-mask-image: var(--cover-logo-asset, url("/about-spider-prompt.png"));
   -webkit-mask-repeat: no-repeat;
   -webkit-mask-position: center;
   -webkit-mask-size: contain;
-  mask-image: var(--cover-logo-asset, url("/projects/scriptmind/scriptmind-logo.png"));
+  mask-image: var(--cover-logo-asset, url("/about-spider-prompt.png"));
   mask-repeat: no-repeat;
   mask-position: center;
   mask-size: contain;
@@ -1322,15 +1322,15 @@
   z-index: 1;
 }
 
-.project-card__button--scriptmind-wave .project-card__impact::before {
+.project-card__button--sample-wave-wave .project-card__impact::before {
   inset: -0.3rem -0.52rem -0.54rem -0.46rem;
 }
 
-.project-card__button--scriptmind-wave .project-card__impact::after {
+.project-card__button--sample-wave-wave .project-card__impact::after {
   inset: -0.14rem -0.24rem -0.26rem -0.18rem;
 }
 
-.project-card__button--scriptmind-wave .project-card__impact {
+.project-card__button--sample-wave-wave .project-card__impact {
   top: 0.72rem;
   left: 0.88rem;
   right: auto;
@@ -1338,12 +1338,12 @@
   transform: translate3d(0, 0, 0) scale(0.68) rotate(-4deg);
 }
 
-.project-card__button--scriptmind-wave .project-card__cover-bubble::before {
+.project-card__button--sample-wave-wave .project-card__cover-bubble::before {
   background: #050505;
   clip-path: polygon(8% 18%, 90% 14%, 98% 42%, 90% 74%, 52% 78%, 40% 94%, 34% 78%, 10% 74%, 2% 42%);
 }
 
-.project-card__button--scriptmind-wave .project-card__cover-bubble::after {
+.project-card__button--sample-wave-wave .project-card__cover-bubble::after {
   background:
     radial-gradient(circle, rgba(255, 255, 255, 0.22) 0 1.6px, transparent 2px),
     linear-gradient(135deg, rgba(228, 247, 255, 0.98) 0%, rgba(120, 229, 255, 0.98) 48%, rgba(255, 158, 86, 0.96) 100%);
@@ -1354,82 +1354,82 @@
     0 0 18px rgba(114, 228, 255, 0.14);
 }
 
-.project-card__button--scriptmind-wave.is-hovered::before,
-.project-card__button--scriptmind-wave:focus-visible::before,
-.project-card__button--scriptmind-wave.is-returning::before,
-.project-card__button--scriptmind-wave.is-active-scene::before {
+.project-card__button--sample-wave-wave.is-hovered::before,
+.project-card__button--sample-wave-wave:focus-visible::before,
+.project-card__button--sample-wave-wave.is-returning::before,
+.project-card__button--sample-wave-wave.is-active-scene::before {
   opacity: 0.92;
   filter: grayscale(0) saturate(1.02) contrast(1.08) brightness(0.94);
   transform: scale(1.04);
 }
 
-.project-card__button--scriptmind-wave.is-hovered::after,
-.project-card__button--scriptmind-wave:focus-visible::after,
-.project-card__button--scriptmind-wave.is-returning::after,
-.project-card__button--scriptmind-wave.is-active-scene::after {
+.project-card__button--sample-wave-wave.is-hovered::after,
+.project-card__button--sample-wave-wave:focus-visible::after,
+.project-card__button--sample-wave-wave.is-returning::after,
+.project-card__button--sample-wave-wave.is-active-scene::after {
   opacity: 0.34;
   transform: translate3d(0, 0, 0) scale(1.04);
   filter: grayscale(0) saturate(0.92) blur(1px);
 }
 
-.project-card__button--scriptmind-wave.is-hovered .project-card__cover-panel,
-.project-card__button--scriptmind-wave:focus-visible .project-card__cover-panel,
-.project-card__button--scriptmind-wave.is-returning .project-card__cover-panel,
-.project-card__button--scriptmind-wave.is-active-scene .project-card__cover-panel {
+.project-card__button--sample-wave-wave.is-hovered .project-card__cover-panel,
+.project-card__button--sample-wave-wave:focus-visible .project-card__cover-panel,
+.project-card__button--sample-wave-wave.is-returning .project-card__cover-panel,
+.project-card__button--sample-wave-wave.is-active-scene .project-card__cover-panel {
   opacity: 1;
   transform: translate3d(0, 0, 0) scale(1.05);
   filter: grayscale(0) saturate(1.06) contrast(1.04);
 }
 
-.project-card__button--scriptmind-wave.is-hovered .project-card__cover-burst,
-.project-card__button--scriptmind-wave:focus-visible .project-card__cover-burst,
-.project-card__button--scriptmind-wave.is-returning .project-card__cover-burst,
-.project-card__button--scriptmind-wave.is-active-scene .project-card__cover-burst {
+.project-card__button--sample-wave-wave.is-hovered .project-card__cover-burst,
+.project-card__button--sample-wave-wave:focus-visible .project-card__cover-burst,
+.project-card__button--sample-wave-wave.is-returning .project-card__cover-burst,
+.project-card__button--sample-wave-wave.is-active-scene .project-card__cover-burst {
   opacity: 0.54;
   transform: scale(1.08);
   filter: grayscale(0) saturate(1);
 }
 
-.project-card__button--scriptmind-wave.is-hovered .project-card__cover-dots,
-.project-card__button--scriptmind-wave:focus-visible .project-card__cover-dots,
-.project-card__button--scriptmind-wave.is-returning .project-card__cover-dots,
-.project-card__button--scriptmind-wave.is-active-scene .project-card__cover-dots {
+.project-card__button--sample-wave-wave.is-hovered .project-card__cover-dots,
+.project-card__button--sample-wave-wave:focus-visible .project-card__cover-dots,
+.project-card__button--sample-wave-wave.is-returning .project-card__cover-dots,
+.project-card__button--sample-wave-wave.is-active-scene .project-card__cover-dots {
   opacity: 0.4;
   mix-blend-mode: screen;
 }
 
-.project-card__button--scriptmind-wave.is-hovered .project-card__cover-rays,
-.project-card__button--scriptmind-wave:focus-visible .project-card__cover-rays,
-.project-card__button--scriptmind-wave.is-returning .project-card__cover-rays,
-.project-card__button--scriptmind-wave.is-active-scene .project-card__cover-rays {
+.project-card__button--sample-wave-wave.is-hovered .project-card__cover-rays,
+.project-card__button--sample-wave-wave:focus-visible .project-card__cover-rays,
+.project-card__button--sample-wave-wave.is-returning .project-card__cover-rays,
+.project-card__button--sample-wave-wave.is-active-scene .project-card__cover-rays {
   opacity: 0.42;
   transform: scale(1.08) rotate(-1deg);
   filter: grayscale(0) saturate(1);
   mix-blend-mode: screen;
 }
 
-.project-card__button--scriptmind-wave.is-hovered .project-card__cover-bubble,
-.project-card__button--scriptmind-wave:focus-visible .project-card__cover-bubble,
-.project-card__button--scriptmind-wave.is-returning .project-card__cover-bubble,
-.project-card__button--scriptmind-wave.is-active-scene .project-card__cover-bubble {
+.project-card__button--sample-wave-wave.is-hovered .project-card__cover-bubble,
+.project-card__button--sample-wave-wave:focus-visible .project-card__cover-bubble,
+.project-card__button--sample-wave-wave.is-returning .project-card__cover-bubble,
+.project-card__button--sample-wave-wave.is-active-scene .project-card__cover-bubble {
   opacity: 0.86;
   transform: translate3d(0, 0, 0) rotate(8deg) scale(0.92);
   filter: grayscale(0) saturate(1);
 }
 
-.project-card__button--scriptmind-wave.is-hovered .project-card__cover-fragments,
-.project-card__button--scriptmind-wave:focus-visible .project-card__cover-fragments,
-.project-card__button--scriptmind-wave.is-returning .project-card__cover-fragments,
-.project-card__button--scriptmind-wave.is-active-scene .project-card__cover-fragments {
+.project-card__button--sample-wave-wave.is-hovered .project-card__cover-fragments,
+.project-card__button--sample-wave-wave:focus-visible .project-card__cover-fragments,
+.project-card__button--sample-wave-wave.is-returning .project-card__cover-fragments,
+.project-card__button--sample-wave-wave.is-active-scene .project-card__cover-fragments {
   opacity: 0.62;
   transform: scale(1) rotate(-2deg);
   filter: grayscale(0) saturate(1);
 }
 
-.project-card__button--scriptmind-wave.is-hovered .project-card__logo-mark::before,
-.project-card__button--scriptmind-wave:focus-visible .project-card__logo-mark::before,
-.project-card__button--scriptmind-wave.is-returning .project-card__logo-mark::before,
-.project-card__button--scriptmind-wave.is-active-scene .project-card__logo-mark::before {
+.project-card__button--sample-wave-wave.is-hovered .project-card__logo-mark::before,
+.project-card__button--sample-wave-wave:focus-visible .project-card__logo-mark::before,
+.project-card__button--sample-wave-wave.is-returning .project-card__logo-mark::before,
+.project-card__button--sample-wave-wave.is-active-scene .project-card__logo-mark::before {
   opacity: 1;
   filter:
     grayscale(1)
@@ -1439,29 +1439,29 @@
   mix-blend-mode: multiply;
 }
 
-.project-card__button--scriptmind-wave.is-hovered .project-card__logo-mark::after,
-.project-card__button--scriptmind-wave:focus-visible .project-card__logo-mark::after,
-.project-card__button--scriptmind-wave.is-returning .project-card__logo-mark::after,
-.project-card__button--scriptmind-wave.is-active-scene .project-card__logo-mark::after {
+.project-card__button--sample-wave-wave.is-hovered .project-card__logo-mark::after,
+.project-card__button--sample-wave-wave:focus-visible .project-card__logo-mark::after,
+.project-card__button--sample-wave-wave.is-returning .project-card__logo-mark::after,
+.project-card__button--sample-wave-wave.is-active-scene .project-card__logo-mark::after {
   opacity: 1;
   transform: scale(1.03);
 }
 
-.project-card__button--scriptmind-wave.is-hovered .project-card__impact,
-.project-card__button--scriptmind-wave:focus-visible .project-card__impact,
-.project-card__button--scriptmind-wave.is-returning .project-card__impact,
-.project-card__button--scriptmind-wave.is-active-scene .project-card__impact {
+.project-card__button--sample-wave-wave.is-hovered .project-card__impact,
+.project-card__button--sample-wave-wave:focus-visible .project-card__impact,
+.project-card__button--sample-wave-wave.is-returning .project-card__impact,
+.project-card__button--sample-wave-wave.is-active-scene .project-card__impact {
   transform: translate3d(0, 0, 0) scale(1) rotate(-4deg);
 }
 
-.project-card__button--scriptmind-wave.is-hovered .project-card__logo-mark,
-.project-card__button--scriptmind-wave:focus-visible .project-card__logo-mark,
-.project-card__button--scriptmind-wave.is-returning .project-card__logo-mark,
-.project-card__button--scriptmind-wave.is-active-scene .project-card__logo-mark {
+.project-card__button--sample-wave-wave.is-hovered .project-card__logo-mark,
+.project-card__button--sample-wave-wave:focus-visible .project-card__logo-mark,
+.project-card__button--sample-wave-wave.is-returning .project-card__logo-mark,
+.project-card__button--sample-wave-wave.is-active-scene .project-card__logo-mark {
   transform: translateY(0.52rem) scale(1.06);
 }
 
-.project-card__button--bugpet-pixel {
+.project-card__button--sample-pixel-pixel {
   --hover-shift-x: -0.02rem;
   --hover-lift: -1.02rem;
   --hover-rotate: -0.85deg;
@@ -1496,7 +1496,7 @@
     0 0 10px rgba(255, 255, 255, 0.03);
 }
 
-.project-card__button--bugpet-pixel::before {
+.project-card__button--sample-pixel-pixel::before {
   background-image:
     radial-gradient(circle, rgba(238, 236, 255, 0.22) 0 1.2px, transparent 1.65px),
     linear-gradient(180deg, rgba(48, 42, 112, 0.24), rgba(8, 10, 21, 0.16)),
@@ -1514,7 +1514,7 @@
   transform: scale(0.98);
 }
 
-.project-card__button--bugpet-pixel::after {
+.project-card__button--sample-pixel-pixel::after {
   inset: 4% 0 18% 0;
   background:
     radial-gradient(circle at 50% 30%, rgba(255, 207, 148, 0.18) 0 8%, transparent 22%),
@@ -1525,11 +1525,11 @@
   filter: blur(2px);
 }
 
-.project-card__button--bugpet-pixel .project-card__copy {
+.project-card__button--sample-pixel-pixel .project-card__copy {
   max-width: 18.5ch;
 }
 
-.project-card__button--bugpet-pixel .project-card__cover-panel {
+.project-card__button--sample-pixel-pixel .project-card__cover-panel {
   inset: 0;
   border: none;
   border-radius: inherit;
@@ -1548,7 +1548,7 @@
   mask-image: linear-gradient(180deg, #000 0 72%, rgba(0, 0, 0, 0.96) 82%, rgba(0, 0, 0, 0.56) 92%, transparent 100%);
 }
 
-.project-card__button--bugpet-pixel .project-card__cover-burst {
+.project-card__button--sample-pixel-pixel .project-card__cover-burst {
   inset: 2% 0 16% 0;
   background:
     radial-gradient(circle at 50% 28%, rgba(255, 214, 164, 0.18) 0 5%, transparent 13%),
@@ -1559,7 +1559,7 @@
   filter: saturate(0.8);
 }
 
-.project-card__button--bugpet-pixel .project-card__cover-dots {
+.project-card__button--sample-pixel-pixel .project-card__cover-dots {
   inset: 0;
   background:
     radial-gradient(circle, rgba(241, 239, 255, 0.38) 0 1.1px, transparent 1.5px) 0 0 / 14px 14px,
@@ -1570,7 +1570,7 @@
   mix-blend-mode: screen;
 }
 
-.project-card__button--bugpet-pixel .project-card__cover-rays {
+.project-card__button--sample-pixel-pixel .project-card__cover-rays {
   inset: -8% -6% 34% -6%;
   background:
     linear-gradient(138deg, transparent 0 47%, rgba(244, 241, 255, 0.76) 47% 49%, transparent 49%) 16% 26% / 18% 16% no-repeat,
@@ -1581,11 +1581,11 @@
   filter: blur(0.2px);
 }
 
-.project-card__button--bugpet-pixel .project-card__cover-bubble {
+.project-card__button--sample-pixel-pixel .project-card__cover-bubble {
   display: none;
 }
 
-.project-card__button--bugpet-pixel .project-card__cover-fragments {
+.project-card__button--sample-pixel-pixel .project-card__cover-fragments {
   inset: 0;
   opacity: 0;
   transform: scale(0.92);
@@ -1596,11 +1596,11 @@
     linear-gradient(0deg, transparent 0 92%, rgba(255, 255, 255, 0.08) 92% 94%, transparent 94%) 0 100% / 100% 36% no-repeat;
 }
 
-.project-card__button--bugpet-pixel .project-card__logo {
+.project-card__button--sample-pixel-pixel .project-card__logo {
   inset: 12% 16% 40% 16%;
 }
 
-.project-card__button--bugpet-pixel .project-card__logo::before {
+.project-card__button--sample-pixel-pixel .project-card__logo::before {
   inset: 16% 12% 10%;
   border-radius: 2rem;
   background:
@@ -1609,14 +1609,14 @@
   opacity: 0.08;
 }
 
-.project-card__button--bugpet-pixel .project-card__logo-mark {
+.project-card__button--sample-pixel-pixel .project-card__logo-mark {
   width: min(56%, 9.4rem);
   aspect-ratio: 1 / 1;
   transform: translateY(0.46rem);
 }
 
-.project-card__button--bugpet-pixel .project-card__logo-mark::before {
-  background: center / contain no-repeat var(--cover-logo-asset, url("/projects/bugpet/bugpet-logo.png"));
+.project-card__button--sample-pixel-pixel .project-card__logo-mark::before {
+  background: center / contain no-repeat var(--cover-logo-asset, url("/about-spider-prompt.png"));
   filter:
     grayscale(1)
     saturate(0.08)
@@ -1626,7 +1626,7 @@
   opacity: 0.94;
 }
 
-.project-card__button--bugpet-pixel .project-card__logo-mark::after {
+.project-card__button--sample-pixel-pixel .project-card__logo-mark::after {
   inset: -14%;
   background:
     radial-gradient(circle, rgba(255, 187, 108, 0.22) 0%, transparent 64%);
@@ -1634,99 +1634,99 @@
   filter: blur(12px);
 }
 
-.project-card__button--bugpet-pixel .project-card__impact--subtle::before {
+.project-card__button--sample-pixel-pixel .project-card__impact--subtle::before {
   inset: -0.28rem -0.48rem -0.3rem;
 }
 
-.project-card__button--bugpet-pixel .project-card__impact--subtle::after {
+.project-card__button--sample-pixel-pixel .project-card__impact--subtle::after {
   inset: -0.12rem -0.2rem -0.16rem;
 }
 
-.project-card__button--bugpet-pixel .project-card__type {
+.project-card__button--sample-pixel-pixel .project-card__type {
   max-width: 17ch;
 }
 
-.project-card__button--bugpet-pixel p {
+.project-card__button--sample-pixel-pixel p {
   max-width: 18.5ch;
 }
 
-.project-card__button--bugpet-pixel.is-hovered::before,
-.project-card__button--bugpet-pixel:focus-visible::before,
-.project-card__button--bugpet-pixel.is-returning::before,
-.project-card__button--bugpet-pixel.is-active-scene::before {
+.project-card__button--sample-pixel-pixel.is-hovered::before,
+.project-card__button--sample-pixel-pixel:focus-visible::before,
+.project-card__button--sample-pixel-pixel.is-returning::before,
+.project-card__button--sample-pixel-pixel.is-active-scene::before {
   opacity: 0.78;
   filter: saturate(0.92) contrast(1.08) brightness(1);
   transform: scale(1.02);
 }
 
-.project-card__button--bugpet-pixel.is-hovered::after,
-.project-card__button--bugpet-pixel:focus-visible::after,
-.project-card__button--bugpet-pixel.is-returning::after,
-.project-card__button--bugpet-pixel.is-active-scene::after {
+.project-card__button--sample-pixel-pixel.is-hovered::after,
+.project-card__button--sample-pixel-pixel:focus-visible::after,
+.project-card__button--sample-pixel-pixel.is-returning::after,
+.project-card__button--sample-pixel-pixel.is-active-scene::after {
   opacity: 0.42;
   transform: translate3d(0, 0, 0) scale(1.04);
   filter: blur(2px);
 }
 
-.project-card__button--bugpet-pixel.is-hovered .project-card__cover-panel,
-.project-card__button--bugpet-pixel:focus-visible .project-card__cover-panel,
-.project-card__button--bugpet-pixel.is-returning .project-card__cover-panel,
-.project-card__button--bugpet-pixel.is-active-scene .project-card__cover-panel {
+.project-card__button--sample-pixel-pixel.is-hovered .project-card__cover-panel,
+.project-card__button--sample-pixel-pixel:focus-visible .project-card__cover-panel,
+.project-card__button--sample-pixel-pixel.is-returning .project-card__cover-panel,
+.project-card__button--sample-pixel-pixel.is-active-scene .project-card__cover-panel {
   opacity: 1;
   transform: translate3d(0, 0, 0) scale(1.06);
   filter: grayscale(0) saturate(0.92) brightness(0.92);
 }
 
-.project-card__button--bugpet-pixel.is-hovered .project-card__cover-burst,
-.project-card__button--bugpet-pixel:focus-visible .project-card__cover-burst,
-.project-card__button--bugpet-pixel.is-returning .project-card__cover-burst,
-.project-card__button--bugpet-pixel.is-active-scene .project-card__cover-burst {
+.project-card__button--sample-pixel-pixel.is-hovered .project-card__cover-burst,
+.project-card__button--sample-pixel-pixel:focus-visible .project-card__cover-burst,
+.project-card__button--sample-pixel-pixel.is-returning .project-card__cover-burst,
+.project-card__button--sample-pixel-pixel.is-active-scene .project-card__cover-burst {
   opacity: 0.58;
   transform: scale(1.06);
 }
 
-.project-card__button--bugpet-pixel.is-hovered .project-card__cover-dots,
-.project-card__button--bugpet-pixel:focus-visible .project-card__cover-dots,
-.project-card__button--bugpet-pixel.is-returning .project-card__cover-dots,
-.project-card__button--bugpet-pixel.is-active-scene .project-card__cover-dots {
+.project-card__button--sample-pixel-pixel.is-hovered .project-card__cover-dots,
+.project-card__button--sample-pixel-pixel:focus-visible .project-card__cover-dots,
+.project-card__button--sample-pixel-pixel.is-returning .project-card__cover-dots,
+.project-card__button--sample-pixel-pixel.is-active-scene .project-card__cover-dots {
   opacity: 0.38;
 }
 
-.project-card__button--bugpet-pixel.is-hovered .project-card__cover-rays,
-.project-card__button--bugpet-pixel:focus-visible .project-card__cover-rays,
-.project-card__button--bugpet-pixel.is-returning .project-card__cover-rays,
-.project-card__button--bugpet-pixel.is-active-scene .project-card__cover-rays {
+.project-card__button--sample-pixel-pixel.is-hovered .project-card__cover-rays,
+.project-card__button--sample-pixel-pixel:focus-visible .project-card__cover-rays,
+.project-card__button--sample-pixel-pixel.is-returning .project-card__cover-rays,
+.project-card__button--sample-pixel-pixel.is-active-scene .project-card__cover-rays {
   opacity: 0.56;
   transform: scale(1.02);
 }
 
-.project-card__button--bugpet-pixel.is-hovered .project-card__cover-fragments,
-.project-card__button--bugpet-pixel:focus-visible .project-card__cover-fragments,
-.project-card__button--bugpet-pixel.is-returning .project-card__cover-fragments,
-.project-card__button--bugpet-pixel.is-active-scene .project-card__cover-fragments {
+.project-card__button--sample-pixel-pixel.is-hovered .project-card__cover-fragments,
+.project-card__button--sample-pixel-pixel:focus-visible .project-card__cover-fragments,
+.project-card__button--sample-pixel-pixel.is-returning .project-card__cover-fragments,
+.project-card__button--sample-pixel-pixel.is-active-scene .project-card__cover-fragments {
   opacity: 0.88;
   transform: scale(1);
 }
 
-.project-card__button--bugpet-pixel.is-hovered .project-card__logo::before,
-.project-card__button--bugpet-pixel:focus-visible .project-card__logo::before,
-.project-card__button--bugpet-pixel.is-returning .project-card__logo::before,
-.project-card__button--bugpet-pixel.is-active-scene .project-card__logo::before {
+.project-card__button--sample-pixel-pixel.is-hovered .project-card__logo::before,
+.project-card__button--sample-pixel-pixel:focus-visible .project-card__logo::before,
+.project-card__button--sample-pixel-pixel.is-returning .project-card__logo::before,
+.project-card__button--sample-pixel-pixel.is-active-scene .project-card__logo::before {
   opacity: 0.42;
   transform: scale(1.04);
 }
 
-.project-card__button--bugpet-pixel.is-hovered .project-card__logo-mark,
-.project-card__button--bugpet-pixel:focus-visible .project-card__logo-mark,
-.project-card__button--bugpet-pixel.is-returning .project-card__logo-mark,
-.project-card__button--bugpet-pixel.is-active-scene .project-card__logo-mark {
+.project-card__button--sample-pixel-pixel.is-hovered .project-card__logo-mark,
+.project-card__button--sample-pixel-pixel:focus-visible .project-card__logo-mark,
+.project-card__button--sample-pixel-pixel.is-returning .project-card__logo-mark,
+.project-card__button--sample-pixel-pixel.is-active-scene .project-card__logo-mark {
   transform: translateY(0.2rem) scale(1.04);
 }
 
-.project-card__button--bugpet-pixel.is-hovered .project-card__logo-mark::before,
-.project-card__button--bugpet-pixel:focus-visible .project-card__logo-mark::before,
-.project-card__button--bugpet-pixel.is-returning .project-card__logo-mark::before,
-.project-card__button--bugpet-pixel.is-active-scene .project-card__logo-mark::before {
+.project-card__button--sample-pixel-pixel.is-hovered .project-card__logo-mark::before,
+.project-card__button--sample-pixel-pixel:focus-visible .project-card__logo-mark::before,
+.project-card__button--sample-pixel-pixel.is-returning .project-card__logo-mark::before,
+.project-card__button--sample-pixel-pixel.is-active-scene .project-card__logo-mark::before {
   filter:
     grayscale(0)
     saturate(1.02)
@@ -1736,10 +1736,10 @@
     drop-shadow(0 14px 22px rgba(0, 0, 0, 0.28));
 }
 
-.project-card__button--bugpet-pixel.is-hovered .project-card__logo-mark::after,
-.project-card__button--bugpet-pixel:focus-visible .project-card__logo-mark::after,
-.project-card__button--bugpet-pixel.is-returning .project-card__logo-mark::after,
-.project-card__button--bugpet-pixel.is-active-scene .project-card__logo-mark::after {
+.project-card__button--sample-pixel-pixel.is-hovered .project-card__logo-mark::after,
+.project-card__button--sample-pixel-pixel:focus-visible .project-card__logo-mark::after,
+.project-card__button--sample-pixel-pixel.is-returning .project-card__logo-mark::after,
+.project-card__button--sample-pixel-pixel.is-active-scene .project-card__logo-mark::after {
   opacity: 0.38;
   transform: scale(1.12);
 }
@@ -2041,11 +2041,11 @@
 
 .project-card__button--football-ink .project-card__logo-mark::before {
   inset: 4%;
-  -webkit-mask-image: var(--cover-logo-asset, url("/projects/futmap/futmap-logo-icon.svg"));
+  -webkit-mask-image: var(--cover-logo-asset, url("/about-spider.svg"));
   -webkit-mask-position: center;
   -webkit-mask-repeat: no-repeat;
   -webkit-mask-size: contain;
-  mask-image: var(--cover-logo-asset, url("/projects/futmap/futmap-logo-icon.svg"));
+  mask-image: var(--cover-logo-asset, url("/about-spider.svg"));
   mask-position: center;
   mask-repeat: no-repeat;
   mask-size: contain;
@@ -2351,7 +2351,7 @@
   clip-path: none;
   background:
     linear-gradient(180deg, rgba(0, 0, 0, 0.02) 0%, rgba(5, 7, 10, 0.14) 34%, rgba(5, 7, 10, 0.88) 100%),
-    var(--cover-art-asset, url("/projects/futmap/futmap-cover-art.jpg"));
+    var(--cover-art-asset, url("/about-spider-prompt.png"));
   background-size: cover;
   background-position: left top;
   opacity: 0;
@@ -2420,7 +2420,7 @@
 
 .project-card__button--football-ink .project-card__logo-mark::before {
   inset: 0;
-  background: center / contain no-repeat var(--cover-logo-asset, url("/projects/futmap/futmap-logo-fut.png"));
+  background: center / contain no-repeat var(--cover-logo-asset, url("/about-spider-prompt.png"));
   filter:
     brightness(0.92)
     contrast(1.02)
@@ -2552,7 +2552,7 @@
 .project-card__button--football-ink:focus-visible .project-card__logo-mark::before,
 .project-card__button--football-ink.is-returning .project-card__logo-mark::before,
 .project-card__button--football-ink.is-active-scene .project-card__logo-mark::before {
-  background: center / contain no-repeat var(--cover-logo-asset, url("/projects/futmap/futmap-logo-fut.png"));
+  background: center / contain no-repeat var(--cover-logo-asset, url("/about-spider-prompt.png"));
   filter:
     brightness(1)
     contrast(1.04)
@@ -2599,9 +2599,9 @@
 
 /* Unified monochrome card cover override */
 .project-card__button--logo-burst,
-.project-card__button--scriptmind-wave,
+.project-card__button--sample-wave-wave,
 .project-card__button--football-ink,
-.project-card__button--bugpet-pixel {
+.project-card__button--sample-pixel-pixel {
   --card-panel-neutral:
     linear-gradient(180deg, rgba(255, 255, 255, 0.028), transparent 40%),
     linear-gradient(180deg, rgba(19, 19, 22, 0.985) 0%, rgba(11, 12, 15, 0.995) 72%, rgba(4, 5, 8, 1) 100%);
@@ -2618,9 +2618,9 @@
 }
 
 .project-card__button--logo-burst::before,
-.project-card__button--scriptmind-wave::before,
+.project-card__button--sample-wave-wave::before,
 .project-card__button--football-ink::before,
-.project-card__button--bugpet-pixel::before {
+.project-card__button--sample-pixel-pixel::before {
   background-image:
     radial-gradient(circle, rgba(244, 245, 240, 0.16) 0 1.25px, transparent 1.7px),
     linear-gradient(180deg, rgba(255, 255, 255, 0.05) 0%, rgba(6, 8, 12, 0.04) 44%, rgba(6, 8, 12, 0.12) 100%);
@@ -2634,34 +2634,34 @@
 }
 
 .project-card__button--logo-burst::after,
-.project-card__button--scriptmind-wave::after,
+.project-card__button--sample-wave-wave::after,
 .project-card__button--football-ink::after,
-.project-card__button--bugpet-pixel::after {
+.project-card__button--sample-pixel-pixel::after {
   background: radial-gradient(circle at 50% 34%, rgba(255, 255, 255, 0.16) 0 13%, transparent 38%);
   filter: blur(18px);
   opacity: 0.52;
 }
 
 .project-card__button--logo-burst:not(.is-hovered):not(:focus-visible):not(.is-returning):not(.is-active-scene) .project-card__cover-panel,
-.project-card__button--scriptmind-wave:not(.is-hovered):not(:focus-visible):not(.is-returning):not(.is-active-scene) .project-card__cover-panel,
+.project-card__button--sample-wave-wave:not(.is-hovered):not(:focus-visible):not(.is-returning):not(.is-active-scene) .project-card__cover-panel,
 .project-card__button--football-ink:not(.is-hovered):not(:focus-visible):not(.is-returning):not(.is-active-scene) .project-card__cover-panel,
-.project-card__button--bugpet-pixel:not(.is-hovered):not(:focus-visible):not(.is-returning):not(.is-active-scene) .project-card__cover-panel,
+.project-card__button--sample-pixel-pixel:not(.is-hovered):not(:focus-visible):not(.is-returning):not(.is-active-scene) .project-card__cover-panel,
 .project-card__button--logo-burst:not(.is-hovered):not(:focus-visible):not(.is-returning):not(.is-active-scene) .project-card__cover-burst,
-.project-card__button--scriptmind-wave:not(.is-hovered):not(:focus-visible):not(.is-returning):not(.is-active-scene) .project-card__cover-burst,
+.project-card__button--sample-wave-wave:not(.is-hovered):not(:focus-visible):not(.is-returning):not(.is-active-scene) .project-card__cover-burst,
 .project-card__button--football-ink:not(.is-hovered):not(:focus-visible):not(.is-returning):not(.is-active-scene) .project-card__cover-burst,
-.project-card__button--bugpet-pixel:not(.is-hovered):not(:focus-visible):not(.is-returning):not(.is-active-scene) .project-card__cover-burst,
+.project-card__button--sample-pixel-pixel:not(.is-hovered):not(:focus-visible):not(.is-returning):not(.is-active-scene) .project-card__cover-burst,
 .project-card__button--logo-burst:not(.is-hovered):not(:focus-visible):not(.is-returning):not(.is-active-scene) .project-card__cover-rays,
-.project-card__button--scriptmind-wave:not(.is-hovered):not(:focus-visible):not(.is-returning):not(.is-active-scene) .project-card__cover-rays,
+.project-card__button--sample-wave-wave:not(.is-hovered):not(:focus-visible):not(.is-returning):not(.is-active-scene) .project-card__cover-rays,
 .project-card__button--football-ink:not(.is-hovered):not(:focus-visible):not(.is-returning):not(.is-active-scene) .project-card__cover-rays,
-.project-card__button--bugpet-pixel:not(.is-hovered):not(:focus-visible):not(.is-returning):not(.is-active-scene) .project-card__cover-rays,
+.project-card__button--sample-pixel-pixel:not(.is-hovered):not(:focus-visible):not(.is-returning):not(.is-active-scene) .project-card__cover-rays,
 .project-card__button--logo-burst:not(.is-hovered):not(:focus-visible):not(.is-returning):not(.is-active-scene) .project-card__cover-bubble,
-.project-card__button--scriptmind-wave:not(.is-hovered):not(:focus-visible):not(.is-returning):not(.is-active-scene) .project-card__cover-bubble,
+.project-card__button--sample-wave-wave:not(.is-hovered):not(:focus-visible):not(.is-returning):not(.is-active-scene) .project-card__cover-bubble,
 .project-card__button--football-ink:not(.is-hovered):not(:focus-visible):not(.is-returning):not(.is-active-scene) .project-card__cover-bubble,
-.project-card__button--bugpet-pixel:not(.is-hovered):not(:focus-visible):not(.is-returning):not(.is-active-scene) .project-card__cover-bubble,
+.project-card__button--sample-pixel-pixel:not(.is-hovered):not(:focus-visible):not(.is-returning):not(.is-active-scene) .project-card__cover-bubble,
 .project-card__button--logo-burst:not(.is-hovered):not(:focus-visible):not(.is-returning):not(.is-active-scene) .project-card__cover-fragments,
-.project-card__button--scriptmind-wave:not(.is-hovered):not(:focus-visible):not(.is-returning):not(.is-active-scene) .project-card__cover-fragments,
+.project-card__button--sample-wave-wave:not(.is-hovered):not(:focus-visible):not(.is-returning):not(.is-active-scene) .project-card__cover-fragments,
 .project-card__button--football-ink:not(.is-hovered):not(:focus-visible):not(.is-returning):not(.is-active-scene) .project-card__cover-fragments,
-.project-card__button--bugpet-pixel:not(.is-hovered):not(:focus-visible):not(.is-returning):not(.is-active-scene) .project-card__cover-fragments,
+.project-card__button--sample-pixel-pixel:not(.is-hovered):not(:focus-visible):not(.is-returning):not(.is-active-scene) .project-card__cover-fragments,
 .project-card__button--football-ink:not(.is-hovered):not(:focus-visible):not(.is-returning):not(.is-active-scene) .project-card__cover-goal,
 .project-card__button--football-ink:not(.is-hovered):not(:focus-visible):not(.is-returning):not(.is-active-scene) .project-card__cover-net,
 .project-card__button--football-ink:not(.is-hovered):not(:focus-visible):not(.is-returning):not(.is-active-scene) .project-card__cover-ball,
@@ -2671,9 +2671,9 @@
 }
 
 .project-card__button--logo-burst:not(.is-hovered):not(:focus-visible):not(.is-returning):not(.is-active-scene) .project-card__cover-dots,
-.project-card__button--scriptmind-wave:not(.is-hovered):not(:focus-visible):not(.is-returning):not(.is-active-scene) .project-card__cover-dots,
+.project-card__button--sample-wave-wave:not(.is-hovered):not(:focus-visible):not(.is-returning):not(.is-active-scene) .project-card__cover-dots,
 .project-card__button--football-ink:not(.is-hovered):not(:focus-visible):not(.is-returning):not(.is-active-scene) .project-card__cover-dots,
-.project-card__button--bugpet-pixel:not(.is-hovered):not(:focus-visible):not(.is-returning):not(.is-active-scene) .project-card__cover-dots {
+.project-card__button--sample-pixel-pixel:not(.is-hovered):not(:focus-visible):not(.is-returning):not(.is-active-scene) .project-card__cover-dots {
   inset: 0;
   background:
     radial-gradient(circle, rgba(246, 247, 242, 0.18) 0 1.2px, transparent 1.65px) 0 0 / 12px 12px,
@@ -2685,9 +2685,9 @@
 }
 
 .project-card__button--logo-burst:not(.is-hovered):not(:focus-visible):not(.is-returning):not(.is-active-scene) .project-card__logo-mark::before,
-.project-card__button--scriptmind-wave:not(.is-hovered):not(:focus-visible):not(.is-returning):not(.is-active-scene) .project-card__logo-mark::before,
+.project-card__button--sample-wave-wave:not(.is-hovered):not(:focus-visible):not(.is-returning):not(.is-active-scene) .project-card__logo-mark::before,
 .project-card__button--football-ink:not(.is-hovered):not(:focus-visible):not(.is-returning):not(.is-active-scene) .project-card__logo-mark::before,
-.project-card__button--bugpet-pixel:not(.is-hovered):not(:focus-visible):not(.is-returning):not(.is-active-scene) .project-card__logo-mark::before {
+.project-card__button--sample-pixel-pixel:not(.is-hovered):not(:focus-visible):not(.is-returning):not(.is-active-scene) .project-card__logo-mark::before {
   filter:
     grayscale(1)
     saturate(0)
@@ -2697,9 +2697,10 @@
 }
 
 .project-card__button--logo-burst:not(.is-hovered):not(:focus-visible):not(.is-returning):not(.is-active-scene) .project-card__logo-mark::after,
-.project-card__button--scriptmind-wave:not(.is-hovered):not(:focus-visible):not(.is-returning):not(.is-active-scene) .project-card__logo-mark::after,
+.project-card__button--sample-wave-wave:not(.is-hovered):not(:focus-visible):not(.is-returning):not(.is-active-scene) .project-card__logo-mark::after,
 .project-card__button--football-ink:not(.is-hovered):not(:focus-visible):not(.is-returning):not(.is-active-scene) .project-card__logo-mark::after,
-.project-card__button--bugpet-pixel:not(.is-hovered):not(:focus-visible):not(.is-returning):not(.is-active-scene) .project-card__logo-mark::after {
+.project-card__button--sample-pixel-pixel:not(.is-hovered):not(:focus-visible):not(.is-returning):not(.is-active-scene) .project-card__logo-mark::after {
   background: radial-gradient(circle, rgba(255, 255, 255, 0.18) 0%, transparent 68%);
 }
+
 
