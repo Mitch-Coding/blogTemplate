@@ -1,3 +1,7 @@
+
+博客效果 : [MITCH](https://xiaomaizhi.me/)  
+主页UI布局设计 : [EIDDIE]https://github.com/eiddiedev
+
 # Nuxt Content Portfolio Blog
 
 一个基于 Nuxt 3 的开源作品集与技术博客模板。项目包含漫画风格首页、`@nuxt/content` 驱动的 Markdown 博客、RSS / sitemap / robots 路由、主题切换、语言状态，以及可选的服务端 AI 助手接口。
