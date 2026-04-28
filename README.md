@@ -1,5 +1,5 @@
 
-Author: [MITCH](https://xiaomaizhi.me/)  
+[MITCH](https://xiaomaizhi.me/)  
 
 模板效果: [example.dev](https://blogtemplate-67j.pages.dev/)  
 
